@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>בינת הלב - Life Coding | הקורס הקרוב · יעל נזר</title>
+<meta name="description" content="בינת הלב - Life Coding. קורס בן עשרה מפגשים שמשלב עבודה תודעתית מבוססת מחקר עם כלי הבינה המלאכותית המתקדמים. פתיחה: 11 באוגוסט 2026, הוד השרון.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@300;400;600;700&family=Heebo:wght@300;400;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#2d7a6e;
+  --primary-dark:#1f5f55;
+  --primary-light:#4a9e90;
+  --gold:#c4a573;
+  --gold-light:#dcc8a0;
+  --gold-deep:#a9853f;
+  --cream:#f8f1e7;
+  --cream-deep:#ede0ce;
+  --cream-light:#fffdf9;
+  --text-dark:#3a281a;
+  --text-mid:#5a4233;
+  --text-light:#9a8574;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Assistant',sans-serif;
+  background-color:var(--cream);
+  color:var(--text-dark);
+  line-height:1.8;
+  font-size:1.4rem;
+  display:flex;flex-direction:column;min-height:100vh;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 1.5rem;width:100%;}
+
+/* ===== GREEN BANNER ===== */
+.top-banner{background:linear-gradient(135deg,var(--primary),var(--primary-dark));text-align:center;padding:.9rem 1rem;box-shadow:0 4px 16px rgba(45,122,110,.25);}
+.top-banner span{font-family:'Suez One',serif;color:#fff;font-size:clamp(1.7rem,4vw,2.1rem);letter-spacing:.02em;}
+
+/* ===== HERO ===== */
+.hero{background:linear-gradient(180deg,var(--cream-light),var(--cream));padding:2.5rem 1.5rem 1.5rem;}
+.hero-frame{
+  max-width:860px;margin:0 auto;
+  border:1px solid var(--gold);border-radius:4px;
+  padding:3rem 2rem 2.6rem;position:relative;
+}
+.hero-frame::before{
+  content:"✦";position:absolute;top:-.7rem;right:50%;transform:translateX(50%);
+  background:var(--cream-light);padding:0 1rem;color:var(--gold);font-size:1rem;
+}
+.hero-text{text-align:center;}
+.hero-author{font-family:'Heebo',sans-serif;font-size:1.5rem;font-weight:600;color:var(--primary);letter-spacing:.02em;margin-bottom:1.5rem;}
+.hero-logo{
+  position:relative;max-width:230px;margin:0 auto 1.8rem;aspect-ratio:1/1;
+  border-radius:50%;overflow:hidden;
+  background:linear-gradient(135deg,var(--cream-light),var(--cream-deep));
+  border:3px solid var(--gold-light);
+  box-shadow:0 16px 44px rgba(196,165,115,.28), inset 0 0 40px rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-logo::before{
+  content:"";position:absolute;width:124%;height:124%;
+  background:radial-gradient(circle,rgba(217,184,106,.4),transparent 68%);border-radius:50%;
+}
+.hero-logo img{position:relative;width:100%;height:100%;object-fit:cover;display:block;}
+.hero-sub{font-family:'Suez One',serif;font-size:clamp(1.6rem,4vw,1.95rem);color:var(--primary-dark);font-weight:normal;line-height:1.4;margin-bottom:.7rem;}
+.hero-subline{width:120px;height:3px;background:linear-gradient(90deg,transparent,var(--primary),transparent);margin:0 auto 1.6rem;border-radius:2px;}
+.hero-divider{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.6rem;}
+.hero-divider::before,.hero-divider::after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.hero-divider span{color:var(--gold);letter-spacing:.3rem;font-size:.95rem;}
+.hero-hook{font-family:'Suez One',serif;font-size:clamp(1.7rem,4vw,2.1rem);color:var(--primary-dark);line-height:1.5;max-width:620px;margin:0 auto;}
+.hero-hook .accent{color:var(--primary);}
+.hero-note{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:var(--text-mid);line-height:1.7;max-width:520px;margin:1.2rem auto 0;}
+.hero-badge{display:inline-block;margin-top:1.4rem;background:var(--gold);color:#fff;font-family:'Heebo',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.03em;padding:.4rem 1.4rem;border-radius:999px;}
+
+/* ===== VIDEO ===== */
+.video-frame{border-radius:1.25rem;overflow:hidden;box-shadow:0 12px 30px rgba(45,122,110,.3);margin-bottom:1.2rem;background:#000;}
+.video-frame.vertical{max-width:340px;margin-inline:auto;aspect-ratio:9/16;}
+.video-frame.framed{border:3px solid var(--gold-light);padding:0;margin-top:2rem;box-shadow:0 16px 44px rgba(196,165,115,.28);}
+.video-frame.wide{aspect-ratio:16/9;}
+.video-frame iframe{width:100%;height:100%;border:0;display:block;}
+.video-caption{font-family:'Varela Round',sans-serif;text-align:center;color:var(--primary);font-size:1.15rem;margin-bottom:2.5rem;}
+
+/* ===== LINKS ===== */
+.links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.8rem;}
+.link-btn{font-family:'Varela Round',sans-serif;font-size:1.2rem;font-weight:700;text-decoration:none;padding:.85rem 2.1rem;border-radius:999px;transition:all .2s;min-height:52px;display:inline-flex;align-items:center;cursor:pointer;border:none;}
+.link-primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 4px 16px rgba(45,122,110,.25);}
+.link-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,122,110,.35);}
+.link-ghost{background:transparent;color:var(--primary);border:2px solid var(--primary);}
+.link-ghost:hover{background:var(--primary);color:#fff;transform:translateY(-2px);}
+
+/* ===== CARDS ===== */
+.card{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
+.card p{font-family:'Varela Round',sans-serif;font-size:1.45rem;color:#2d2d2d;line-height:1.85;margin-bottom:1rem;}
+.card p:last-child{margin-bottom:0;}
+.card .benefit{font-family:'Varela Round',sans-serif;font-weight:600;color:var(--primary-dark);background:rgba(196,165,115,.12);border-right:4px solid var(--gold);padding:1.1rem 1.3rem;border-radius:0 .8rem .8rem 0;}
+.card h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;margin-bottom:1rem;}
+
+.section-heading{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.6rem;}
+.section-sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.2rem;margin-bottom:1.6rem;}
+.section-divider{height:1px;background:linear-gradient(90deg,var(--gold-light),transparent);opacity:.5;margin:0 0 2rem;}
+
+/* ===== TOOLS (INNOV) ===== */
+.innov{background:linear-gradient(135deg,var(--primary),var(--primary-dark));border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 12px 30px rgba(45,122,110,.3);}
+.innov h2{font-family:'Suez One',serif;font-size:2rem;color:#fff;font-weight:normal;margin-bottom:1rem;}
+.innov p{font-family:'Varela Round',sans-serif;font-size:1.4rem;color:#eaf4f1;line-height:1.85;margin-bottom:1rem;}
+.innov p:last-child{margin-bottom:0;}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem 1.5rem;margin:1.6rem 0;}
+.tool{display:flex;align-items:flex-start;gap:.7rem;}
+.tool .ic{font-size:1.5rem;flex-shrink:0;line-height:1.3;}
+.tool .tn{font-family:'Heebo',sans-serif;font-weight:700;color:#fff;font-size:1.25rem;}
+.tool .tu{font-family:'Heebo',sans-serif;color:#cfe6e0;font-size:1.2rem;line-height:1.4;}
+@media(max-width:560px){.tool-grid{grid-template-columns:1fr;}}
+.innov .highlight{background:rgba(255,255,255,.12);border-right:4px solid var(--gold-light);padding:1.1rem 1.3rem;border-radius:0 .8rem .8rem 0;font-weight:600;color:#fff;}
+.innov .note{font-family:'Heebo',sans-serif;font-size:1.15rem;color:#cfe6e0;margin-top:1rem;}
+
+/* ===== TESTIMONIALS CAROUSEL ===== */
+.testi{margin-bottom:2.5rem;}
+.carousel{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.2rem;scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent;}
+.carousel::-webkit-scrollbar{height:8px;}
+.carousel::-webkit-scrollbar-thumb{background:var(--gold-light);border-radius:999px;}
+.carousel::-webkit-scrollbar-track{background:transparent;}
+.slide{flex:0 0 auto;scroll-snap-align:center;width:300px;}
+.slide.wide{width:min(520px,86vw);}
+.vid-card{width:100%;height:400px;background:#111;border-radius:1.25rem;overflow:hidden;box-shadow:0 12px 30px rgba(45,122,110,.3);margin-bottom:.6rem;display:flex;align-items:center;justify-content:center;}
+.vid-card .fit-v{height:100%;aspect-ratio:9/16;}
+.vid-card .fit-w{width:100%;aspect-ratio:16/9;}
+.vid-card iframe{width:100%;height:100%;border:0;display:block;}
+.slide .who{font-family:'Heebo',sans-serif;font-weight:700;color:var(--primary);text-align:center;font-size:1.15rem;}
+.quote-card{background:var(--cream-light);border-radius:1.25rem;padding:1.8rem;height:400px;overflow-y:auto;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--gold);display:flex;flex-direction:column;scrollbar-width:thin;scrollbar-color:var(--gold-light) transparent;}
+.quote-card::-webkit-scrollbar{width:6px;}
+.quote-card::-webkit-scrollbar-thumb{background:var(--gold-light);border-radius:999px;}
+.quote-card .mark{font-family:'Suez One',serif;color:var(--gold);font-size:2.2rem;line-height:1;margin-bottom:.4rem;}
+.quote-card p{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.75;margin-bottom:1rem;}
+.quote-card .who{margin-top:auto;text-align:right;}
+.shot-card{background:var(--cream-light);border-radius:1.25rem;padding:1rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
+.shot-card img{width:100%;border-radius:.8rem;display:block;}
+.carousel-nav{display:flex;justify-content:center;gap:.8rem;margin-top:.2rem;}
+.carousel-nav button{width:46px;height:46px;border-radius:50%;border:2px solid var(--primary);background:transparent;color:var(--primary);font-size:1.3rem;cursor:pointer;transition:all .2s;line-height:1;}
+.carousel-nav button:hover{background:var(--primary);color:#fff;}
+
+/* ===== SCHEDULE ===== */
+.unit{margin-bottom:1.8rem;}
+.unit-title{font-family:'Suez One',serif;font-size:1.45rem;color:var(--gold-deep);font-weight:normal;margin-bottom:.9rem;padding-right:.2rem;}
+.step-card{background:#fff;border-radius:1rem;padding:1.3rem 1.5rem;border-right:5px solid var(--gold);box-shadow:0 4px 12px rgba(45,122,110,.06);margin-bottom:.9rem;}
+.step-card-inner{display:flex;align-items:flex-start;gap:1rem;}
+.step-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;width:2.6rem;height:2.6rem;border-radius:50%;font-family:'Suez One',serif;font-size:1.3rem;flex-shrink:0;margin-top:.15rem;}
+.step-content h3{font-family:'Suez One',serif;font-size:1.4rem;color:var(--primary);font-weight:normal;margin-bottom:.3rem;line-height:1.4;}
+.step-content .date{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--text-light);font-weight:600;}
+.step-content .tools{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;}
+.step-content .tools span{font-family:'Heebo',sans-serif;font-size:.95rem;background:rgba(45,122,110,.10);color:var(--primary-dark);padding:.2rem .8rem;border-radius:999px;}
+.break-note{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.15rem;background:rgba(196,165,115,.12);border-radius:.8rem;padding:.8rem 1rem;margin-bottom:2rem;}
+
+/* ===== DETAILS ===== */
+.details{background:linear-gradient(135deg,var(--cream-light),var(--cream));border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--gold);}
+.details h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:1.5rem;}
+.detail-row{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
+.detail-row:last-child{border-bottom:none;}
+.detail-row .k{font-family:'Heebo',sans-serif;font-weight:700;color:var(--primary);font-size:1.25rem;min-width:110px;flex-shrink:0;}
+.detail-row .v{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.6;}
+
+/* ===== PRICE ===== */
+.price{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);text-align:center;}
+.price h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;margin-bottom:1.4rem;}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.4rem;}
+@media(max-width:560px){.price-grid{grid-template-columns:1fr;}}
+.price-box{border:1.5px solid var(--gold-light);border-radius:1rem;padding:1.5rem 1.2rem;background:#fff;}
+.price-box.featured{border:2px solid var(--primary);background:rgba(45,122,110,.05);}
+.price-box .amount{font-family:'Suez One',serif;font-size:2.2rem;color:var(--primary-dark);line-height:1.2;}
+.price-box .label{font-family:'Varela Round',sans-serif;font-size:1.15rem;color:var(--text-mid);line-height:1.6;margin-top:.4rem;}
+.price .whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1.4rem;background:#25D366;color:#fff;font-family:'Varela Round',sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.85rem 2.1rem;border-radius:999px;min-height:52px;transition:all .2s;}
+.price .whatsapp::before{content:"✆";font-size:1.3rem;}
+.price .whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.35);}
+.price .whatsapp-note{font-family:'Varela Round',sans-serif;font-size:1.1rem;color:var(--text-mid);margin-top:.7rem;}
+.price .terms{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:#2d2d2d;background:rgba(196,165,115,.12);border-right:4px solid var(--gold);border-radius:0 .8rem .8rem 0;padding:1.1rem 1.3rem;text-align:right;line-height:1.8;}
+
+/* ===== ABOUT ===== */
+.about{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--gold);}
+.about h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.4rem;}
+.about .role{font-family:'Heebo',sans-serif;text-align:center;color:var(--gold-deep);font-size:1.15rem;font-weight:600;margin-bottom:1.6rem;}
+.about-photo{max-width:340px;margin:0 auto 1.6rem;border-radius:1.25rem;overflow:hidden;border:3px solid var(--gold-light);box-shadow:0 16px 44px rgba(196,165,115,.28);}
+.about-photo img{width:100%;height:auto;display:block;}
+.about p{font-family:'Varela Round',sans-serif;font-size:1.4rem;color:#2d2d2d;line-height:1.85;margin-bottom:1rem;}
+.about p:last-child{margin-bottom:0;}
+
+/* ===== CONTACT ===== */
+.contact{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:1.5rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
+.contact h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.3rem;}
+.contact .sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--primary);margin-bottom:1.5rem;font-size:1.25rem;}
+.contact form{display:flex;flex-direction:column;gap:.85rem;max-width:480px;margin:0 auto;}
+.contact input,.contact textarea{font-family:'Assistant',sans-serif;font-size:1.15rem;border:1.5px solid rgba(45,122,110,.3);border-radius:.8rem;padding:.8rem 1.1rem;background:#fff;color:var(--text-dark);transition:border-color .2s,box-shadow .2s;width:100%;}
+.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(45,122,110,.12);}
+.contact textarea{resize:vertical;min-height:96px;}
+.submit{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border:none;height:54px;border-radius:999px;font-family:'Varela Round',sans-serif;font-weight:700;font-size:1.25rem;cursor:pointer;transition:all .2s;margin-top:.4rem;}
+.submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,122,110,.35);}
+.submit:disabled{opacity:.6;cursor:wait;transform:none;box-shadow:none;}
+.contact-error{font-family:'Varela Round',sans-serif;text-align:center;color:#b00020;font-size:1.1rem;margin-top:.7rem;}
+.contact-success{text-align:center;padding:1.5rem 1rem;}
+.contact-success p{font-family:'Suez One',serif;font-size:1.5rem;color:var(--primary-dark);max-width:480px;margin:0 auto;line-height:1.5;}
+.contact .direct{font-family:'Varela Round',sans-serif;text-align:center;margin-top:1.2rem;color:var(--primary);font-size:1.1rem;}
+.contact .direct a{color:var(--primary);text-decoration:none;font-weight:700;}
+
+.closing{text-align:center;margin:2.5rem auto 2rem;max-width:560px;}
+.closing p{font-family:'Suez One',serif;font-size:clamp(1.4rem,3vw,1.7rem);color:var(--primary-dark);line-height:1.6;}
+.closing-photo{max-width:220px;margin:1.4rem auto 0;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:3px solid var(--gold-light);box-shadow:0 16px 44px rgba(196,165,115,.28);}
+.closing-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.closing .sig{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:var(--gold-deep);margin-top:.8rem;}
+
+.footer{text-align:center;padding:1.8rem 1rem;border-top:1.5px solid var(--gold-light);background:var(--cream-deep);margin-top:1.5rem;}
+.footer p{font-family:'Assistant',sans-serif;font-size:.95rem;color:var(--text-light);}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:640px){
+  .card,.innov,.details,.price,.about,.contact{padding:1.9rem 1.4rem;}
+  .hero-frame{padding:2.2rem 1.2rem 2rem;}
+  .hero-logo{max-width:180px;}
+  .link-btn{width:100%;justify-content:center;}
+  .hero-divider::before,.hero-divider::after{width:45px;}
+  .detail-row{flex-direction:column;gap:.2rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== GREEN BANNER ===== -->
+<div class="top-banner"><span>בינת הלב · Life Coding</span></div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-frame">
+    <div class="hero-text">
+      <p class="hero-author">יעל נזר ✦ מפתחת השיטה</p>
+      <div class="hero-divider"><span>✦ ✦ ✦</span></div>
+      <p class="hero-sub">המקום שבו תודעה פוגשת בינה מלאכותית</p>
+      <div class="hero-subline"></div>
+      <p class="hero-hook">אם מילים כותבות קוד בבינה מלאכותית,<br><span class="accent">אולי הן כותבות גם את קוד החיים שלנו?</span></p>
+      <p class="hero-note">קורס בוטיק חדשני יוצא לדרך. נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר.</p>
+      <span class="hero-badge">פתיחה: 11 באוגוסט 2026 · מספר המשתתפים מוגבל</span>
+
+      <!-- סרטון פותח: כל מציאות מתחילה מפריים אחד -->
+      <div class="video-frame vertical framed">
+        <iframe src="https://www.youtube.com/embed/8jUtX_MTt8g" title="כל מציאות מתחילה מפריים אחד" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ===== TOOLS ===== -->
+  <div class="innov reveal">
+    <p>הבינה המלאכותית משנה את העולם. השאלה היא איך אנחנו בוחרות ובוחרים לפגוש את השינוי הזה, מתוך סקרנות או מתוך חשש. בקורס נעבוד בפועל עם הכלים המתקדמים שקיימים היום, ונשתמש בהם בשני מישורים: כמרחב אימון תודעתי, וככלי יצירה מעשי.</p>
+    <div class="tool-grid">
+      <div class="tool"><span class="ic">✍️</span><div><div class="tn">ChatGPT, Claude, Gemini</div><div class="tu">לשיח ולחקירת מחשבות שורש</div></div></div>
+      <div class="tool"><span class="ic">📚</span><div><div class="tn">NotebookLM</div><div class="tu">ללמידה ולהעמקה</div></div></div>
+      <div class="tool"><span class="ic">🎨</span><div><div class="tn">מחוללי תמונות</div><div class="tu">למפת הבמאי ולסטוריבורד</div></div></div>
+      <div class="tool"><span class="ic">🎬</span><div><div class="tn">Canva</div><div class="tu">להפקת הטריילר האישי</div></div></div>
+      <div class="tool"><span class="ic">💻</span><div><div class="tn">Lovable</div><div class="tu">לבניית אפליקציה אישית</div></div></div>
+      <div class="tool"><span class="ic">🤖</span><div><div class="tn">בוטים אישיים</div><div class="tu">כעוגן יומיומי</div></div></div>
+    </div>
+    <p class="highlight">בסוף הדרך תבנו אפליקציה אישית שמותאמת ל-DNA שלכם, עוזר במאי שממשיך ללוות אתכם בשגרה, גם אחרי שהקורס נגמר.</p>
+    <p class="note">ללא צורך בידע מוקדם בתכנות.</p>
+  </div>
+
+  <!-- ===== METHOD ===== -->
+  <h2 class="section-heading">מהות השיטה</h2>
+  <div class="section-divider"></div>
+  <div class="card reveal">
+    <p>אמונות יסוד שנוצרו בילדות פועלות כקוד תודעתי, ומייצרות את חוויית המציאות שלנו. הן קובעות איך אנחנו מפרשים מה שקורה, איך אנחנו מגיבים, ואיזו סצנה חוזרת אצלנו שוב ושוב.</p>
+    <p>בינת הלב, Life Coding, היא שיטה שמפגישה עבודה תודעתית מבוססת מחקר עם כלי בינה מלאכותית. השיטה נשענת על שיטת העבודה של ביירון קייטי, על מודל ה-ACT, על תקשורת מקרבת ועל ממצאי הנוירופלסטיות. הגישה היא להכיר את הדפוס בחמלה, להבין את תפקידו המגן, ולבחור במודע בקוד חדש המבוסס על ערכים, חזון וחופש.</p>
+  </div>
+
+  <!-- ===== LINKS ===== -->
+  <nav class="links">
+    <a class="link-primary link-btn" href="https://yaelnezer.github.io/binat-halev-syllabus-public/">סילבוס מלא</a>
+  </nav>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="testi reveal">
+    <h2 class="section-heading">מה אומרים בוגרי המחזור הראשון</h2>
+    <p class="section-sub">גללו לצדדים כדי לראות עוד</p>
+    <div class="carousel" id="carousel">
+
+      <!-- וידאו 1 -->
+      <div class="slide">
+        <div class="vid-card">
+          <div class="fit-v"><iframe src="https://www.youtube.com/embed/FpcNiGy0S-Q" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+        <p class="who">רונית</p>
+      </div>
+
+      <!-- וידאו 2 -->
+      <div class="slide">
+        <div class="vid-card">
+          <div class="fit-w"><iframe src="https://www.youtube.com/embed/7_lHElauPp8" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+        <p class="who">עדי זקר</p>
+      </div>
+
+      <!-- וידאו 3 -->
+      <div class="slide">
+        <div class="vid-card">
+          <div class="fit-w"><iframe src="https://www.youtube.com/embed/fhZeDnVdBSk" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+        <p class="who">אורית ויטנר</p>
+      </div>
+
+      <!-- ציטוטים -->
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>יעל יקרה, תודה ענקית על הקורס המעמיק. לאורך חיי למדתי גישות שונות ושיטות שונות להתפתחות. בקורס של בינת הלב יצרת שילוב גאוני בין הרבה גישות, חלק הכרתי וחלק היו חידוש מרענן וחשוב עבורי. שזרת את הכלים באופן הגיוני, כך שכל כלי הוביל אותי שלב אחר שלב להכרות מעמיקה עם עצמי בתחומים שלא התוודעתי להם קודם.</p>
+          <p>בסוף הקורס הצלחתי ליצור באמצעות הכלים סט כרזות מרהיב, אותן אני מדפיסה ותולה כדי להשתמש בהן כהשראה לשינוי התודעה. השילוב של הכלים הרוחניים המובילים להתפתחות, יחד עם כלי הבינה בצורה כל כך נגישה, מאפשרים לי להמשיך לעבוד איתם באופן עצמאי. אני מוצאת את עצמי ממשיכה לחקור ולהעמיק בזמני בסוגיות נוספות באמצעות הכלים הללו.</p>
+          <p>ההנגשה של כל הכלים והדרך הסבלנית והמקצועית בהן העברת את הקורס גרמו לכל הנלמד להפוך לישים. ממליצה בחום לכל מי שאוהב להתפתח כדרך חיים לא להחמיץ את הקורס הזה, הוא נותן כלים עוצמתיים ונגישים.</p>
+          <p class="who">עדי</p>
+        </div>
+      </div>
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>אני ממליצה בחום על הקורס בינת הלב בהנחיית יעל נזר. זהו קורס ייחודי ומעשיר, המעניק כלים מעשיים להתמודדות עם מצבים ואתגרים שונים בחיי היומיום. התכנים מגוונים, מעוררי חשיבה ורלוונטיים לחיים. בנוסף לתכנים ניתנים כלים הממשיכים ללוות אותי גם לאחר סיום הקורס.</p>
+          <p>יעל מעבירה את הקורס בצורה ברורה, מקצועית ומעניינת, תוך יצירת אווירה נעימה, מכילה ומאפשרת. הידע, הניסיון והרגישות שלה מורגשים בכל מפגש ותורמים לחוויית למידה משמעותית ומעצימה.</p>
+          <p>יעל, אני מודה לך מקרב לב על קורס שהעניק לי תובנות וכלים חשובים, והשאיר בי טעם של עוד. תודה על הדרך, על ההשקעה ועל ההשראה.</p>
+          <p class="who">אהובה דור</p>
+        </div>
+      </div>
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>השתתפתי בסדנה של יעל נזר בשם בינת הלב Life Coding, ואני שמחה ונרגשת לתת את המלצתי. הסדנה הייתה מקצועית ומעמיקה ושילבה את עולם המודעות ועולם ה-AI בצורה מיטבית, מעניינת וחדשנית. הצלחנו לקבל ידע רב ולתרגל כל שלב בתהליך בזמן קצר ביותר ביחס לסדנאות אחרות שהשתתפתי בהן.</p>
+          <p>יעל השקיעה זמן רב ליצירת הסדנה המופלאה הזאת, בתכנים, בעיצוב, בהנגשה. החשיבה והדיוק ניכרים בכל פרט ופרט. כמה בינה ולב יש בסדנה הזאת. יעל העבירה את התכנים במקצוענות ובאנושיות רבה.</p>
+          <p>יצאתי מהסדנה עם סל כלים גדול ומגוון, תודעתי וטכנולוגי, עם חומרים לעבודה עצמית והתפתחות אישית, וכלי AI שאאמץ לעצמי, במיוחד NotebookLM. תודה גדולה יעל, על הסדנה ועל מי שאת, זכיתי.</p>
+          <p class="who">פנינה</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>היי יעל, אני רוצה להודות לך מעומק הלב על קורס מעשיר, מלמד, פורה ומושקע. הייתה לי חוויה מצוינת, למידה משמעותית על עצמי, ובונוס על הכלים הטכנולוגיים המתקדמים.</p>
+          <p class="who">אריאל</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>תודה רבה יעל, יצרת קורס שהוא לחיים. קורס חובה לכל מי שידו בחינוך ולכלל, ברמה הכי גבוהה שיש. הוא מקנה כלים, משנה דפוסי חשיבה ויוצר שינוי.</p>
+          <p class="who">עדי יעיש</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>את משהו מיוחד. יצרת קורס מושקע מאוד שמאפשר לכל אחד ואחת ליצור גרסה טובה יותר של עצמו. שילוב הבינה המלאכותית בתכנים הוא גאוני. שמחתי מאוד לקחת חלק בקורס.</p>
+          <p class="who">אירנה</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>תודה רבה על ההשתלמות מיוחדת במינה, מעצימה, המאפשרת התבוננות פנימה, ושהיא מתנה עבורנו.</p>
+          <p class="who">קרן</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>תודה רבה יעל על לב פתוח ועל עשייה מהלב למען כל אחת ואחד. יישר כוח על פיתוח הקורס הייחודי ועל הנחייתו ברגישות ובתבונת הלב.</p>
+          <p class="who">יפעת פרידמן</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>בזכות הקורס זכינו לעצור רגע, להתבונן פנימה ולמלא.</p>
+          <p class="who">יפית</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>תודה יעל על קורס מעצים, מפתח ומטעין. ובנוסף, תודה שלימדת אותי את הדרך שבה הבינה המלאכותית יכולה להיות ידידותית למשתמש.</p>
+          <p class="who">ליאת</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>תודה על הסבלנות ועל מתן המרחב לעבוד על עצמנו, דבר שלרוב לא מסתייע בשגרת החיים.</p>
+          <p class="who">פז</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>כמה שיחות עם הבינה הצליחו להזיז אצלי משהו במקום מאוד ספציפי. זה לא נשאר שם, זה מתחיל להשפיע גם על תחומים אחרים בחיים. אם היו מספרים לי את זה מראש, הייתי מגלגלת עיניים. היום אני מופתעת לטובה.</p>
+          <p class="who">ציפי</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>לפעמים מגיע קורס שלא רק מלמד משהו חדש, אלא פותח דרך חדשה להסתכל על עצמנו ועל העולם. אני מרגישה שהשילוב בין טכנולוגיה, תודעה ולב פותח דלתות שלא ידענו שקיימות.</p>
+          <p class="who">ציפי</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>ישבתי עד 2 לפנות בוקר לסיים את השיחה שלי עם ג׳מיני שהתחלנו אתמול בהשתלמות. אני רק רוצה לומר לך יעל, שאת גאון, שיצרת את ההשתלמות הזו.</p>
+          <p class="who">משתתפת בקורס</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>מחכה כבר בקוצר רוח למפגש הבא. פעם ראשונה מרגישה שאני לומדת ומעשירה את הידע מתוך הנאה.</p>
+          <p class="who">משתתפת בקורס</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>עבדת מאוד קשה ליצור הנגשה של כלי תודעה בקלות לכל אדם. זה מדהים לחסוך לאנשים המון זמן בתהליך התפתחות, לערוך הכרות עם כל מה שמעכב אותם מלהיות הגרסה הטובה ביותר של עצמם.</p>
+          <p class="who">משתתפת בקורס</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>אני בונה פעילות דומה לצוות בזכותך. תקשיבי, יצא מדהים, אשתף בהמשך.</p>
+          <p class="who">משתתפת בקורס</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button type="button" id="prev" aria-label="הקודם">→</button>
+      <button type="button" id="next" aria-label="הבא">←</button>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <h2 class="section-heading">לוח המפגשים</h2>
+
+  <div class="unit">
+    <h3 class="unit-title">יחידה ראשונה · הקרנת הבכורה, חשיפת התסריט הקיים</h3>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>הקרנת הבכורה, לחשוף את תסריט החיים</h3>
+          <p class="date">שלישי, 11.8</p>
+          <div class="tools"><span>מודלי שפה: ChatGPT, Claude, Gemini</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>מי מנהל את הסרט שלי</h3>
+          <p class="date">שלישי, 18.8</p>
+          <div class="tools"><span>מודלי שפה: ChatGPT, Claude, Gemini</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>מה הסרט החיצוני מגלה לי</h3>
+          <p class="date">שלישי, 25.8</p>
+          <div class="tools"><span>מחוללי תמונות</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="unit">
+    <h3 class="unit-title">יחידה שנייה · חדר העריכה, כותבים את התסריט מחדש</h3>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>מקודדים מחדש, שיטת העבודה של ביירון קייטי</h3>
+          <p class="date">שלישי, 1.9</p>
+          <div class="tools"><span>מאמן AI</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>מפת הבמאי, מודל ה-ACT Matrix</h3>
+          <p class="date">שלישי, 8.9</p>
+          <div class="tools"><span>מחוללי תמונות</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <h3>הדיאלוג החדש, תקשורת מקרבת</h3>
+          <p class="date">שלישי, 15.9</p>
+          <div class="tools"><span>מאמן AI</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">7</div>
+        <div class="step-content">
+          <h3>עוגנים יומיומיים והרחבת התודעה</h3>
+          <p class="date">שלישי, 22.9</p>
+          <div class="tools"><span>NotebookLM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="unit">
+    <h3 class="unit-title">יחידה שלישית · ההפקה, הופכים חזון למציאות</h3>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">8</div>
+        <div class="step-content">
+          <h3>הפקת הטריילר של חיינו</h3>
+          <p class="date">שלישי, 6.10</p>
+          <div class="tools"><span>Canva</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">9</div>
+        <div class="step-content">
+          <h3>יצירת עוזר במאי אישי, בניית אפליקציה</h3>
+          <p class="date">שלישי, 3.11</p>
+          <div class="tools"><span>Lovable</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-card-inner">
+        <div class="step-number">10</div>
+        <div class="step-content">
+          <h3>מחזון למציאות, הצגת התוצרים וסיום</h3>
+          <p class="date">שלישי, 10.11</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== DETAILS ===== -->
+  <div class="details reveal">
+    <h2>הפרטים</h2>
+    <div class="detail-row"><span class="k">פתיחה</span><span class="v">יום שלישי, 11 באוגוסט 2026</span></div>
+    <div class="detail-row"><span class="k">מפגשים</span><span class="v">עשרה מפגשים, אחת לשבוע, בימי שלישי</span></div>
+    <div class="detail-row"><span class="k">שעות</span><span class="v">18:30 עד 20:30</span></div>
+    <div class="detail-row"><span class="k">מקום</span><span class="v">הוד השרון. הכתובת המדויקת נשלחת עם אישור ההרשמה</span></div>
+    <div class="detail-row"><span class="k">פורמט</span><span class="v">מפגשים פרונטליים בקבוצת בוטיק קטנה, באווירה ביתית נעימה</span></div>
+    <div class="detail-row"><span class="k">מקומות</span><span class="v">מספר המקומות מוגבל</span></div>
+  </div>
+
+  <!-- ===== PRICE ===== -->
+  <div class="price reveal">
+    <h2>השקעה והרשמה</h2>
+    <div class="price-grid">
+      <div class="price-box">
+        <div class="amount">2,100 ₪</div>
+        <div class="label">עשרה מפגשים, כולל הכלים, התרגולים והליווי לאורך הדרך</div>
+      </div>
+      <div class="price-box featured">
+        <div class="amount">1,900 ₪</div>
+        <div class="label">בהרשמה מוקדמת, עד 31 ביולי 2026</div>
+      </div>
+    </div>
+    <p class="terms">ההרשמה מותנית בתשלום דמי רישום בסך 300 ₪, המהווים מקדמה על חשבון מחיר הקורס ושומרים את המקום בקבוצה.</p>
+    <a class="whatsapp" href="https://chat.whatsapp.com/Io5hjDnIb3D7W4uUPm78FK?s=cl&amp;p=a&amp;ilr=4" target="_blank" rel="noopener">להצטרפות לקבוצת הוואטסאפ</a>
+    <p class="whatsapp-note">בקבוצה מתעדכנים בפרטי הקורס, בתאריכים ובפתיחת ההרשמה.</p>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <div class="about reveal">
+    <h2>מי אני</h2>
+    <p class="role">יעל נזר, MEd ✦ מנטורית להתפתחות אישית ומומחית בטכנו-פדגוגיה ובינה מלאכותית</p>
+    <div class="about-photo"><img src="yael-collage.png" alt="יעל נזר"></div>
+    <p>אני יעל נזר, מפתחת שיטת Life Coding, בינת הלב. למעלה מ-35 שנה אני עוסקת בחינוך, בפדגוגיה דיגיטלית ובהתפתחות אישית. לקחתי את שני התחומים שאני מתמחה בהם, העבודה התודעתית והבינה המלאכותית, וחיברתי אותם לשיטה אחת.</p>
+    <p>הוסמכתי בשיטת העבודה של ביירון קייטי, ב-NLP ובתקשורת מקרבת. אני מכירה לעומק את שיטת 12 הצעדים, את גישת ACT ואת האינטליגנציה החיובית, ומשלבת אותן בתהליכים שאני מנחה. הבסיס המדעי לעבודה מגיע ממחקרי הנוירופלסטיות, שמראים שהמוח גמיש ושאפשר לבנות בו נתיבים חדשים.</p>
+    <p>הדבר שמניע אותי הוא התובנה שאמונות יסוד שנוצרו בילדות פועלות כקוד תודעתי, ומייצרות את חוויית המציאות שלנו. כשמזהים את הקוד, אפשר לבחור במודע בקוד חדש, מבוסס ערכים, חזון וחופש.</p>
+  </div>
+
+  <!-- ===== CLOSING ===== -->
+  <div class="closing reveal">
+    <p>מה שאנחנו יוצרים בתוך הלב, מוצא בסופו של דבר את דרכו אל העולם.</p>
+    <p class="sig">באהבה, יעל</p>
+    <div class="closing-photo"><img src="profile_png.png" alt="יעל נזר"></div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <div class="contact reveal" id="contact">
+    <h2>מעוניינים? נשמח לחזור אליכם</h2>
+    <p class="sub">השאירו פרטים ויעל תיצור איתכם קשר</p>
+    <!-- TODO: החליפו את YOUR_FORM_ID במזהה Formspree של ynezer@gmail.com. הוא משמש להתראת מייל בלבד. הנתונים נשמרים במקביל בטבלת leads ב-Supabase. -->
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="text" name="organization" placeholder="שם הארגון / המוסד (אם רלוונטי)">
+      <input type="email" name="email" placeholder="דוא״ל" required>
+      <input type="tel" name="phone" placeholder="טלפון">
+      <textarea name="message" placeholder="מה תרצו לדעת? (לא חובה)"></textarea>
+      <button type="submit" class="submit">שליחה ←</button>
+      <p class="contact-error" hidden role="alert"></p>
+    </form>
+    <div class="contact-success" hidden>
+      <p>תודה! קיבלנו את הפנייה ויעל תיצור איתכם קשר בקרוב.</p>
+    </div>
+    <p class="direct">או ישירות: <a href="tel:0548023823">054-8023823</a> · <a href="mailto:ynezer@gmail.com">ynezer@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer class="footer"><p>© יעל נזר 2026 · בינת הלב Life Coding</p></footer>
+
+<script>
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+  // Smooth scroll to the contact form
+  document.querySelectorAll('a[href="#contact"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+</script>
+
+<script>
+  // Testimonials carousel: RTL horizontal scroll with arrows.
+  (function(){
+    const car=document.getElementById('carousel');
+    if(!car)return;
+    const step=()=>Math.min(car.clientWidth*0.85,420);
+    document.getElementById('next').addEventListener('click',()=>car.scrollBy({left:-step(),behavior:'smooth'}));
+    document.getElementById('prev').addEventListener('click',()=>car.scrollBy({left:step(),behavior:'smooth'}));
+  })();
+</script>
+
+<script>
+  // Contact form: stores submission in Supabase (leads table) and sends email via Formspree in parallel.
+  (function(){
+    const SUPABASE_URL='https://ftqmiaywoantfbkiqfeq.supabase.co';
+    const SUPABASE_KEY='sb_publishable_S32YyB5AWQ2DtzHygCnddw_T6Xk-o7B';
+
+    const form=document.getElementById('contact-form');
+    if(!form)return;
+    const successEl=document.querySelector('.contact-success');
+    const errorEl=form.querySelector('.contact-error');
+    const submitBtn=form.querySelector('.submit');
+
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      errorEl.hidden=true;
+      submitBtn.disabled=true;
+      const originalText=submitBtn.textContent;
+      submitBtn.textContent='שולח...';
+
+      const fd=new FormData(form);
+      const payload={
+        name:(fd.get('name')||'').toString().trim(),
+        organization:(fd.get('organization')||'').toString().trim()||null,
+        email:(fd.get('email')||'').toString().trim(),
+        phone:(fd.get('phone')||'').toString().trim()||null,
+        message:(fd.get('message')||'').toString().trim()||null,
+      };
+
+      const supabasePromise=fetch(SUPABASE_URL+'/rest/v1/leads',{
+        method:'POST',
+        headers:{
+          'apikey':SUPABASE_KEY,
+          'Authorization':'Bearer '+SUPABASE_KEY,
+          'Content-Type':'application/json',
+          'Prefer':'return=minimal'
+        },
+        body:JSON.stringify(payload)
+      });
+
+      const formspreePromise=fetch(form.action,{
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:fd
+      }).catch(function(){return null;});
+
+      try{
+        const supaResp=await supabasePromise;
+        await formspreePromise;
+        if(!supaResp.ok){
+          throw new Error('Supabase responded '+supaResp.status);
+        }
+        form.hidden=true;
+        successEl.hidden=false;
+        successEl.scrollIntoView({behavior:'smooth',block:'center'});
+      }catch(err){
+        submitBtn.disabled=false;
+        submitBtn.textContent=originalText;
+        errorEl.textContent='משהו השתבש בשליחה. אנא נסו שוב, או שלחו מייל ישירות ל-ynezer@gmail.com';
+        errorEl.hidden=false;
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
