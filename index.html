@@ -71,9 +71,10 @@ body{
 .hero-divider{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.6rem;}
 .hero-divider::before,.hero-divider::after{content:"";height:1px;width:70px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
 .hero-divider span{color:var(--gold);letter-spacing:.3rem;font-size:.95rem;}
+.hero-lead{font-family:'Varela Round',sans-serif;font-size:1.35rem;font-weight:600;color:var(--primary-dark);line-height:1.8;max-width:620px;margin:0 auto 1.4rem;}
 .hero-hook{font-family:'Suez One',serif;font-size:clamp(1.7rem,4vw,2.1rem);color:var(--primary-dark);line-height:1.5;max-width:620px;margin:0 auto;}
 .hero-hook .accent{color:var(--primary);}
-.hero-note{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:var(--text-mid);line-height:1.7;max-width:520px;margin:1.2rem auto 0;}
+.hero-note{font-family:'Varela Round',sans-serif;font-size:1.35rem;font-weight:600;color:var(--primary-dark);line-height:1.7;max-width:520px;margin:1.2rem auto 0;}
 .hero-badge{display:inline-block;margin-top:1.4rem;background:var(--gold);color:#fff;font-family:'Heebo',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.03em;padding:.4rem 1.4rem;border-radius:999px;}
 
 /* ===== VIDEO ===== */
@@ -81,7 +82,7 @@ body{
 .video-frame.vertical{max-width:340px;margin-inline:auto;aspect-ratio:9/16;}
 .video-frame.framed{border:3px solid var(--gold-light);padding:0;margin-top:2rem;box-shadow:0 16px 44px rgba(196,165,115,.28);}
 .video-frame.wide{aspect-ratio:16/9;}
-.video-frame iframe{width:100%;height:100%;border:0;display:block;}
+.video-frame iframe,.video-frame video{width:100%;height:100%;border:0;display:block;object-fit:cover;}
 .video-caption{font-family:'Varela Round',sans-serif;text-align:center;color:var(--primary);font-size:1.15rem;margin-bottom:2.5rem;}
 
 /* ===== LINKS ===== */
@@ -100,6 +101,7 @@ body{
 .card h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;margin-bottom:1rem;}
 
 .section-heading{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.6rem;}
+.section-hook{font-family:'Suez One',serif;font-size:clamp(1.4rem,3vw,1.75rem);color:var(--primary-dark);text-align:center;line-height:1.5;max-width:620px;margin:0 auto 1.4rem;}
 .section-sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.2rem;margin-bottom:1.6rem;}
 .section-divider{height:1px;background:linear-gradient(90deg,var(--gold-light),transparent);opacity:.5;margin:0 0 2rem;}
 
@@ -143,8 +145,15 @@ body{
 .carousel-nav button:hover{background:var(--primary);color:#fff;}
 
 /* ===== SCHEDULE ===== */
-.unit{margin-bottom:1.8rem;}
-.unit-title{font-family:'Suez One',serif;font-size:1.45rem;color:var(--gold-deep);font-weight:normal;margin-bottom:.9rem;padding-right:.2rem;}
+.unit-card{background:var(--cream-light);border-radius:1.25rem;padding:2rem 1.8rem;margin-bottom:1.2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
+.lesson{display:grid;grid-template-columns:2.2rem 6.5rem 1fr;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
+.lesson:last-child{border-bottom:none;}
+.lesson .n{font-family:'Suez One',serif;color:var(--gold-deep);font-size:1.3rem;text-align:center;}
+.lesson .d{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--text-light);font-weight:600;}
+.lesson .t{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.5;}
+.lesson .tg{font-family:'Heebo',sans-serif;font-size:.95rem;background:rgba(45,122,110,.10);color:var(--primary-dark);padding:.2rem .8rem;border-radius:999px;white-space:nowrap;}
+@media(max-width:640px){.lesson{grid-template-columns:2rem 1fr;row-gap:.2rem;}.lesson .d{grid-column:2;}.lesson .t{grid-column:2;}}
+.unit-title{font-family:'Suez One',serif;font-size:1.45rem;color:var(--primary-dark);font-weight:normal;margin-bottom:.9rem;line-height:1.4;}
 .step-card{background:#fff;border-radius:1rem;padding:1.3rem 1.5rem;border-right:5px solid var(--gold);box-shadow:0 4px 12px rgba(45,122,110,.06);margin-bottom:.9rem;}
 .step-card-inner{display:flex;align-items:flex-start;gap:1rem;}
 .step-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;width:2.6rem;height:2.6rem;border-radius:50%;font-family:'Suez One',serif;font-size:1.3rem;flex-shrink:0;margin-top:.15rem;}
@@ -216,7 +225,7 @@ body{
 .reveal.in{opacity:1;transform:none;}
 
 @media(max-width:640px){
-  .card,.innov,.details,.price,.about,.contact{padding:1.9rem 1.4rem;}
+  .card,.innov,.details,.price,.about,.contact,.unit-card{padding:1.9rem 1.4rem;}
   .hero-frame{padding:2.2rem 1.2rem 2rem;}
   .hero-logo{max-width:180px;}
   .link-btn{width:100%;justify-content:center;}
@@ -234,18 +243,21 @@ body{
 <header class="hero">
   <div class="hero-frame">
     <div class="hero-text">
-      <p class="hero-author">יעל נזר ✦ מפתחת השיטה</p>
-      <div class="hero-divider"><span>✦ ✦ ✦</span></div>
       <p class="hero-sub">המקום שבו תודעה פוגשת בינה מלאכותית</p>
       <div class="hero-subline"></div>
-      <p class="hero-hook">אם מילים כותבות קוד בבינה מלאכותית,<br><span class="accent">אולי הן כותבות גם את קוד החיים שלנו?</span></p>
-      <p class="hero-note">קורס בוטיק חדשני יוצא לדרך. נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר.</p>
-      <span class="hero-badge">פתיחה: 11 באוגוסט 2026 · מספר המשתתפים מוגבל</span>
+      <p class="hero-author">יעל נזר ✦ מפתחת השיטה</p>
+
+      <div class="hero-divider"><span>✦ ✦ ✦</span></div>
+      <p class="hero-lead">הבינה המלאכותית משנה את העולם. השאלה היא איך אנחנו בוחרים לפגוש את השינוי הזה, מתוך סקרנות או מתוך חשש?</p>
+      <p class="hero-hook">קורס בוטיק חדשני יוצא לדרך</p>
+      <p class="hero-note">נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר.</p>
+      <span class="hero-badge">תאריך פתיחה: 11 באוגוסט 2026 · מספר המשתתפים מוגבל!</span>
 
       <!-- סרטון פותח: כל מציאות מתחילה מפריים אחד -->
       <div class="video-frame vertical framed">
-        <iframe src="https://www.youtube.com/embed/8jUtX_MTt8g" title="כל מציאות מתחילה מפריים אחד" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        <video src="opening.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
       </div>
+
     </div>
   </div>
 </header>
@@ -254,7 +266,7 @@ body{
 
   <!-- ===== TOOLS ===== -->
   <div class="innov reveal">
-    <p>הבינה המלאכותית משנה את העולם. השאלה היא איך אנחנו בוחרות ובוחרים לפגוש את השינוי הזה, מתוך סקרנות או מתוך חשש. בקורס נעבוד בפועל עם הכלים המתקדמים שקיימים היום, ונשתמש בהם בשני מישורים: כמרחב אימון תודעתי, וככלי יצירה מעשי.</p>
+    <p>בקורס נעבוד בפועל עם הכלים המתקדמים שקיימים היום, ונשתמש בהם בשני מישורים: כמרחב אימון תודעתי, וככלי יצירה מעשי.</p>
     <div class="tool-grid">
       <div class="tool"><span class="ic">✍️</span><div><div class="tn">ChatGPT, Claude, Gemini</div><div class="tu">לשיח ולחקירת מחשבות שורש</div></div></div>
       <div class="tool"><span class="ic">📚</span><div><div class="tn">NotebookLM</div><div class="tu">ללמידה ולהעמקה</div></div></div>
@@ -269,6 +281,7 @@ body{
 
   <!-- ===== METHOD ===== -->
   <h2 class="section-heading">מהות השיטה</h2>
+  <p class="section-hook">אם מילים כותבות קוד בבינה מלאכותית,<br>אולי הן כותבות גם את קוד החיים שלנו?</p>
   <div class="section-divider"></div>
   <div class="card reveal">
     <p>אמונות יסוד שנוצרו בילדות פועלות כקוד תודעתי, ומייצרות את חוויית המציאות שלנו. הן קובעות איך אנחנו מפרשים מה שקורה, איך אנחנו מגיבים, ואיזו סצנה חוזרת אצלנו שוב ושוב.</p>
@@ -286,7 +299,14 @@ body{
     <p class="section-sub">גללו לצדדים כדי לראות עוד</p>
     <div class="carousel" id="carousel">
 
-      <!-- וידאו 1 -->
+      <!-- סרטוני המלצה -->
+      <div class="slide">
+        <div class="vid-card">
+          <div class="fit-v"><iframe src="https://www.youtube.com/embed/8jUtX_MTt8g" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+        <p class="who">אורית ויטנר</p>
+      </div>
+
       <div class="slide">
         <div class="vid-card">
           <div class="fit-v"><iframe src="https://www.youtube.com/embed/FpcNiGy0S-Q" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
@@ -294,7 +314,6 @@ body{
         <p class="who">רונית</p>
       </div>
 
-      <!-- וידאו 2 -->
       <div class="slide">
         <div class="vid-card">
           <div class="fit-w"><iframe src="https://www.youtube.com/embed/7_lHElauPp8" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
@@ -302,12 +321,18 @@ body{
         <p class="who">עדי זקר</p>
       </div>
 
-      <!-- וידאו 3 -->
       <div class="slide">
         <div class="vid-card">
           <div class="fit-w"><iframe src="https://www.youtube.com/embed/fhZeDnVdBSk" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
         </div>
-        <p class="who">אורית ויטנר</p>
+        <p class="who">איריס</p>
+      </div>
+
+      <div class="slide">
+        <div class="vid-card">
+          <div class="fit-v"><iframe src="https://www.youtube.com/embed/5mzTQ63D5ZU" title="המלצה בווידאו" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+        </div>
+        <p class="who">חגית נחום</p>
       </div>
 
       <!-- ציטוטים -->
@@ -444,120 +469,6 @@ body{
   </section>
 
   <!-- ===== SCHEDULE ===== -->
-  <h2 class="section-heading">לוח המפגשים</h2>
-
-  <div class="unit">
-    <h3 class="unit-title">יחידה ראשונה · הקרנת הבכורה, חשיפת התסריט הקיים</h3>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3>הקרנת הבכורה, לחשוף את תסריט החיים</h3>
-          <p class="date">שלישי, 11.8</p>
-          <div class="tools"><span>מודלי שפה: ChatGPT, Claude, Gemini</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3>מי מנהל את הסרט שלי</h3>
-          <p class="date">שלישי, 18.8</p>
-          <div class="tools"><span>מודלי שפה: ChatGPT, Claude, Gemini</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3>מה הסרט החיצוני מגלה לי</h3>
-          <p class="date">שלישי, 25.8</p>
-          <div class="tools"><span>מחוללי תמונות</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="unit">
-    <h3 class="unit-title">יחידה שנייה · חדר העריכה, כותבים את התסריט מחדש</h3>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">4</div>
-        <div class="step-content">
-          <h3>מקודדים מחדש, שיטת העבודה של ביירון קייטי</h3>
-          <p class="date">שלישי, 1.9</p>
-          <div class="tools"><span>מאמן AI</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">5</div>
-        <div class="step-content">
-          <h3>מפת הבמאי, מודל ה-ACT Matrix</h3>
-          <p class="date">שלישי, 8.9</p>
-          <div class="tools"><span>מחוללי תמונות</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">6</div>
-        <div class="step-content">
-          <h3>הדיאלוג החדש, תקשורת מקרבת</h3>
-          <p class="date">שלישי, 15.9</p>
-          <div class="tools"><span>מאמן AI</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">7</div>
-        <div class="step-content">
-          <h3>עוגנים יומיומיים והרחבת התודעה</h3>
-          <p class="date">שלישי, 22.9</p>
-          <div class="tools"><span>NotebookLM</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="unit">
-    <h3 class="unit-title">יחידה שלישית · ההפקה, הופכים חזון למציאות</h3>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">8</div>
-        <div class="step-content">
-          <h3>הפקת הטריילר של חיינו</h3>
-          <p class="date">שלישי, 6.10</p>
-          <div class="tools"><span>Canva</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">9</div>
-        <div class="step-content">
-          <h3>יצירת עוזר במאי אישי, בניית אפליקציה</h3>
-          <p class="date">שלישי, 3.11</p>
-          <div class="tools"><span>Lovable</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="step-card">
-      <div class="step-card-inner">
-        <div class="step-number">10</div>
-        <div class="step-content">
-          <h3>מחזון למציאות, הצגת התוצרים וסיום</h3>
-          <p class="date">שלישי, 10.11</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
   <!-- ===== DETAILS ===== -->
   <div class="details reveal">
     <h2>הפרטים</h2>
@@ -569,9 +480,33 @@ body{
     <div class="detail-row"><span class="k">מקומות</span><span class="v">מספר המקומות מוגבל</span></div>
   </div>
 
+  <h2 class="section-heading">לוח המפגשים</h2>
+
+  <div class="unit-card reveal">
+    <h3 class="unit-title">יחידה ראשונה · הקרנת הבכורה, חשיפת התסריט הקיים</h3>
+    <div class="lesson"><span class="n">1</span><span class="d">שלישי, 11.8</span><span class="t">הקרנת הבכורה, לחשוף את תסריט החיים</span></div>
+    <div class="lesson"><span class="n">2</span><span class="d">שלישי, 18.8</span><span class="t">מי מנהל את הסרט שלי</span></div>
+    <div class="lesson"><span class="n">3</span><span class="d">שלישי, 25.8</span><span class="t">מה הסרט החיצוני מגלה לי</span></div>
+  </div>
+
+  <div class="unit-card reveal">
+    <h3 class="unit-title">יחידה שנייה · חדר העריכה, כותבים את התסריט מחדש</h3>
+    <div class="lesson"><span class="n">4</span><span class="d">שלישי, 1.9</span><span class="t">מקודדים מחדש, שיטת העבודה של ביירון קייטי</span></div>
+    <div class="lesson"><span class="n">5</span><span class="d">שלישי, 8.9</span><span class="t">מפת הבמאי, מודל ה-ACT Matrix</span></div>
+    <div class="lesson"><span class="n">6</span><span class="d">שלישי, 15.9</span><span class="t">הדיאלוג החדש, תקשורת מקרבת</span></div>
+    <div class="lesson"><span class="n">7</span><span class="d">שלישי, 22.9</span><span class="t">עוגנים יומיומיים והרחבת התודעה</span></div>
+  </div>
+
+  <div class="unit-card reveal">
+    <h3 class="unit-title">יחידה שלישית · ההפקה, הופכים חזון למציאות</h3>
+    <div class="lesson"><span class="n">8</span><span class="d">שלישי, 6.10</span><span class="t">הפקת הטריילר של חיינו</span></div>
+    <div class="lesson"><span class="n">9</span><span class="d">שלישי, 3.11</span><span class="t">יצירת עוזר במאי אישי, בניית אפליקציה</span></div>
+    <div class="lesson"><span class="n">10</span><span class="d">שלישי, 10.11</span><span class="t">מחזון למציאות, הצגת התוצרים וסיום</span></div>
+  </div>
+
   <!-- ===== PRICE ===== -->
   <div class="price reveal">
-    <h2>השקעה והרשמה</h2>
+    <h2>הרשמה</h2>
     <div class="price-grid">
       <div class="price-box">
         <div class="amount">2,100 ₪</div>
