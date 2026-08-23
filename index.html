@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>בינת הלב - Life Coding | הקורס הקרוב · יעל נזר</title>
-<meta name="description" content="בינת הלב - Life Coding. קורס בן עשרה מפגשים שמשלב עבודה תודעתית מבוססת מחקר עם כלי הבינה המלאכותית המתקדמים. פתיחה: 17 באוגוסט 2026, הוד השרון.">
+<title>בינת הלב - Life Coding | הקורס · יעל נזר</title>
+<meta name="description" content="בינת הלב - Life Coding. קורס בן עשרה מפגשים שמשלב עבודה תודעתית מבוססת מחקר עם כלי הבינה המלאכותית המתקדמים. קבוצת בוטיק בהוד השרון.">
 
 <!-- Open Graph: preview card for social networks and WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:url" content="https://yaelnezer.github.io/binat-halev-course-aug2026/">
 <meta property="og:title" content="בינת הלב - Life Coding | המקום שבו תודעה פוגשת בינה מלאכותית">
-<meta property="og:description" content="קורס בוטיק בן עשרה מפגשים. נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר. פתיחה: 17 באוגוסט 2026, הוד השרון.">
+<meta property="og:description" content="קורס בוטיק בן עשרה מפגשים. נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר. קבוצת בוטיק בהוד השרון.">
 <meta property="og:image" content="https://yaelnezer.github.io/binat-halev-course-aug2026/yael-collage.png">
 <meta property="og:image:alt" content="יעל נזר - בינת הלב Life Coding">
 <meta property="og:site_name" content="בינת הלב - Life Coding">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="בינת הלב - Life Coding | המקום שבו תודעה פוגשת בינה מלאכותית">
-<meta name="twitter:description" content="קורס בוטיק בן עשרה מפגשים. פתיחה: 17 באוגוסט 2026, הוד השרון.">
+<meta name="twitter:description" content="קורס בוטיק בן עשרה מפגשים. קבוצת בוטיק בהוד השרון.">
 <meta name="twitter:image" content="https://yaelnezer.github.io/binat-halev-course-aug2026/yael-collage.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,6 +115,21 @@ body{
 .card h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;margin-bottom:1rem;}
 
 .section-heading{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.6rem;}
+.gain-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;text-align:right;max-width:1000px;margin:0 auto;}
+@media (max-width:980px){.gain-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.gain-grid{grid-template-columns:1fr;}}
+.gain{background:var(--cream-light);border:1px solid var(--gold-light);border-radius:1.1rem;padding:1.8rem 1.5rem;box-shadow:0 8px 24px -16px rgba(58,40,26,.3);}
+.gain .ico{font-family:'Suez One',serif;color:var(--gold);font-size:1.6rem;line-height:1;margin-bottom:.5rem;display:block;}
+.gain .gt{font-family:'Heebo',sans-serif;font-weight:700;font-size:1.25rem;color:var(--primary-dark);margin-bottom:.35rem;}
+.gain .gd{font-family:'Assistant',sans-serif;font-size:1.2rem;line-height:1.7;color:var(--text-mid);}
+.trailer{margin:0 auto;text-align:center;}
+.trailer-vid{width:min(300px,72vw);margin:0 auto;aspect-ratio:9/16;background:#111;border-radius:1.25rem;overflow:hidden;box-shadow:0 16px 40px -18px rgba(45,122,110,.45);border:1px solid var(--gold-light);}
+.trailer-vid iframe{width:100%;height:100%;border:0;display:block;}
+.feature{max-width:760px;margin:2.5rem auto 0;text-align:center;}
+.feature .lead{font-family:'Suez One',serif;font-weight:400;font-size:clamp(1.3rem,3vw,1.6rem);color:var(--primary-dark);line-height:1.5;max-width:600px;margin:0 auto 1.4rem;}
+.feature-vid{width:min(320px,80vw);margin:0 auto .7rem;aspect-ratio:9/16;background:#111;border-radius:1.25rem;overflow:hidden;box-shadow:0 16px 40px -18px rgba(45,122,110,.45);}
+.feature-vid iframe{width:100%;height:100%;border:0;display:block;}
+.feature .who{font-family:'Heebo',sans-serif;font-weight:700;color:var(--primary);font-size:1.15rem;}
 .section-hook{font-family:'Suez One',serif;font-size:clamp(1.4rem,3vw,1.75rem);color:var(--primary-dark);text-align:center;line-height:1.5;max-width:620px;margin:0 auto 1.4rem;}
 .section-sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.2rem;margin-bottom:1.6rem;}
 .section-divider{height:1px;background:linear-gradient(90deg,var(--gold-light),transparent);opacity:.5;margin:0 0 2rem;}
@@ -160,13 +175,13 @@ body{
 
 /* ===== SCHEDULE ===== */
 .unit-card{background:var(--cream-light);border-radius:1.25rem;padding:2rem 1.8rem;margin-bottom:1.2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
-.lesson{display:grid;grid-template-columns:2.2rem 6.5rem 1fr;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
+.lesson{display:grid;grid-template-columns:2.2rem 1fr;align-items:center;gap:.9rem;padding:.7rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
 .lesson:last-child{border-bottom:none;}
 .lesson .n{font-family:'Suez One',serif;color:var(--gold-deep);font-size:1.3rem;text-align:center;}
 .lesson .d{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--text-light);font-weight:600;}
 .lesson .t{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.5;}
 .lesson .tg{font-family:'Heebo',sans-serif;font-size:.95rem;background:rgba(45,122,110,.10);color:var(--primary-dark);padding:.2rem .8rem;border-radius:999px;white-space:nowrap;}
-@media(max-width:640px){.lesson{grid-template-columns:2rem 1fr;row-gap:.2rem;}.lesson .d{grid-column:2;}.lesson .t{grid-column:2;}}
+@media(max-width:640px){.lesson{grid-template-columns:2rem 1fr;row-gap:.2rem;}.lesson .t{grid-column:2;}}
 .unit-title{font-family:'Suez One',serif;font-size:1.45rem;color:var(--primary-dark);font-weight:normal;margin-bottom:.9rem;line-height:1.4;}
 .step-card{background:#fff;border-radius:1rem;padding:1.3rem 1.5rem;border-right:5px solid var(--gold);box-shadow:0 4px 12px rgba(45,122,110,.06);margin-bottom:.9rem;}
 .step-card-inner{display:flex;align-items:flex-start;gap:1rem;}
@@ -232,8 +247,8 @@ body{
 .closing-photo img{width:100%;height:100%;object-fit:cover;display:block;}
 .closing .sig{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:var(--gold-deep);margin-top:.8rem;}
 
-.footer{text-align:center;padding:1.8rem 1rem;border-top:1.5px solid var(--gold-light);background:var(--cream-deep);margin-top:1.5rem;}
-.footer p{font-family:'Assistant',sans-serif;font-size:.95rem;color:var(--text-light);}
+.footer{text-align:center;padding:2.2rem 1rem;background:linear-gradient(160deg,var(--primary-dark),var(--primary));margin-top:1.5rem;}
+.footer p{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--cream-light);font-weight:600;}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.in{opacity:1;transform:none;}
@@ -265,7 +280,7 @@ body{
       <p class="hero-lead">הבינה המלאכותית משנה את העולם. השאלה היא איך אנחנו בוחרים לפגוש את השינוי הזה, מתוך סקרנות או מתוך חשש?</p>
       <p class="hero-hook">קורס בוטיק חדשני יוצא לדרך</p>
       <p class="hero-note">נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר.</p>
-      <span class="hero-badge">תאריך פתיחה: 17 באוגוסט 2026 · מספר המשתתפים מוגבל!</span>
+      <span class="hero-badge">קבוצת בוטיק קטנה · מספר המקומות מוגבל</span>
 
       <!-- סרטון פותח: כל מציאות מתחילה מפריים אחד -->
       <div class="video-frame vertical framed">
@@ -280,7 +295,7 @@ body{
 
   <!-- ===== TOOLS ===== -->
   <div class="innov reveal">
-    <p>בקורס נעבוד בפועל עם הכלים המתקדמים שקיימים היום, ונשתמש בהם בשני מישורים: כמרחב אימון תודעתי, וככלי יצירה מעשי.</p>
+    <p>בשיטה עובדים בפועל עם הכלים המתקדמים שקיימים היום, ומשתמשים בהם כמרחב אימון תודעתי וככלי יצירה מעשי.</p>
     <div class="tool-grid">
       <div class="tool"><span class="ic">✍️</span><div><div class="tn">ChatGPT, Claude, Gemini</div><div class="tu">לשיח ולחקירת מחשבות שורש</div></div></div>
       <div class="tool"><span class="ic">📚</span><div><div class="tn">NotebookLM</div><div class="tu">ללמידה ולהעמקה</div></div></div>
@@ -298,18 +313,55 @@ body{
   <p class="section-hook">אם מילים כותבות קוד בבינה מלאכותית,<br>אולי הן כותבות גם את קוד החיים שלנו?</p>
   <div class="section-divider"></div>
   <div class="card reveal">
-    <p>אמונות יסוד שנוצרו בילדות פועלות כקוד תודעתי, ומייצרות את חוויית המציאות שלנו. הן קובעות איך אנחנו מפרשים מה שקורה, איך אנחנו מגיבים, ואיזו סצנה חוזרת אצלנו שוב ושוב.</p>
-    <p>בינת הלב, Life Coding, היא שיטה שמפגישה עבודה תודעתית מבוססת מחקר עם כלי בינה מלאכותית. השיטה נשענת על שיטת העבודה של ביירון קייטי, על מודל ה-ACT, על תקשורת מקרבת ועל ממצאי הנוירופלסטיות. הגישה היא להכיר את הדפוס בחמלה, להבין את תפקידו המגן, ולבחור במודע בקוד חדש המבוסס על ערכים, חזון וחופש.</p>
+    <p>לכל אחד מאיתנו יש מערכת אמונות יסוד שנוצרה מוקדם בחיים. האמונות האלו פועלות ברקע התודעה באופן אוטומטי, וקובעות איך אנחנו מפרשים את מה שקורה, איך אנחנו מגיבים, ואיזו סצנה חוזרת אצלנו שוב ושוב.</p>
+    <p>בינת הלב - Life Coding היא שיטה להתפתחות אישית שמשלבת גישות פסיכולוגיות מבוססות מחקר, כמו שיטת העבודה של ביירון קייטי, תקשורת מקרבת, שיטת 12 הצעדים, ACT ו-NLP, עם כלי בינה מלאכותית. המסע מאפשר לזהות מה משתקף בחיים, לגלות את הקוד שמאחוריו, ולבחור במודע בקוד חדש המבוסס על ערכים, חזון וחופש.</p>
+    <p>כלי הבינה המלאכותית הופכים למרחב אימון תודעתי זמין ומדויק. הם יוצרים בהירות, מדייקים החלטות, ומאפשרים לנהל את החיים מתוך בחירה חופשית ומודעת.</p>
+    <p>את השיטה פיתחתי מתוך החיבור בין עבודה תודעתית לעולם הבינה המלאכותית. השם Life Coding נולד מהמונח vibe coding, שטבע חוקר הבינה המלאכותית אנדריי קרפתי. בתכנות הזה מתארים בשפה טבעית את הכוונה, נותנים את ה"ויב", והמערכת כותבת את הקוד. בחיים זה עובד באותו אופן: ה"ויב" הפנימי, האמונות והסיפורים שלנו, כותב את הקוד של המציאות שאנחנו חווים.</p>
   </div>
 
   <!-- ===== LINKS ===== -->
   <nav class="links">
-    <a class="link-primary link-btn" href="https://yaelnezer.github.io/binat-halev-syllabus-male-public/">סילבוס מלא</a>
+    <a class="link-primary link-btn" href="https://yaelnezer.github.io/binat-halev-syllabus-public/">סילבוס מלא</a>
   </nav>
+
+  <!-- ===== למה Life Coding ===== -->
+  <h2 class="section-heading">למה Life Coding?</h2>
+  <div class="gain-grid reveal">
+    <div class="gain">
+      <span class="ico">✦</span>
+      <div class="gt">חדשנות</div>
+      <div class="gd">שיטה להתפתחות אישית שבה כלי הבינה המלאכותית הופכים למראה לתודעה, מרחב חקירה לזיהוי אמונות השורש.</div>
+    </div>
+    <div class="gain">
+      <span class="ico">✦</span>
+      <div class="gt">פרקטיקה</div>
+      <div class="gd">יוצאים עם ארגז כלים אישי: אפליקציה אישית, בוטים, מפת תודעה ולוח חזון, שממשיכים ללוות אתכם.</div>
+    </div>
+    <div class="gain">
+      <span class="ico">✦</span>
+      <div class="gt">מניעת שחיקה</div>
+      <div class="gd">היכולת לזהות בזמן אמת מה מפעיל אתכם ולבחור אחרת, מתגובה אוטומטית לבחירה מודעת.</div>
+    </div>
+    <div class="gain">
+      <span class="ico">✦</span>
+      <div class="gt">מיומנות</div>
+      <div class="gd">עולים מדרגה בשימוש בכלי הבינה המלאכותית המתקדמים, מתוך שפה טבעית ותחושת ביטחון אישית.</div>
+    </div>
+  </div>
+
+  <!-- ===== הטריילר של עידית ===== -->
+  <div class="reveal" style="text-align:center;margin-top:2.5rem;">
+    <h2 class="section-heading">הטריילר של עידית, בוגרת הקורס</h2>
+    <figure class="trailer">
+      <div class="trailer-vid">
+        <iframe src="https://www.youtube.com/embed/0ejq8nERI48" title="הטריילר של עידית, בוגרת הקורס" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </figure>
+  </div>
 
   <!-- ===== TESTIMONIALS ===== -->
   <section class="testi reveal">
-    <h2 class="section-heading">מה אומרים בוגרי המחזור הראשון</h2>
+    <h2 class="section-heading">מה אומרים המשתתפים</h2>
     <p class="section-sub">גללו לצדדים כדי לראות עוד</p>
     <div class="carousel" id="carousel">
 
@@ -482,13 +534,20 @@ body{
     </div>
   </section>
 
+  <!-- ===== ההמלצה של רונית ===== -->
+  <div class="feature reveal">
+    <p class="lead">איך זה נראה ביום שאחרי? הסיפור של רונית.</p>
+    <div class="feature-vid">
+      <iframe src="https://www.youtube.com/embed/FpcNiGy0S-Q" title="רונית בן יוסף ממליצה" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="who">רונית בן יוסף</p>
+  </div>
+
   <!-- ===== SCHEDULE ===== -->
   <!-- ===== DETAILS ===== -->
   <div class="details reveal">
     <h2>הפרטים</h2>
-    <div class="detail-row"><span class="k">פתיחה</span><span class="v">יום שני, 17 באוגוסט 2026</span></div>
-    <div class="detail-row"><span class="k">מפגשים</span><span class="v">עשרה מפגשים. ארבעה ראשונים בימי שני, וההמשך בימי רביעי</span></div>
-    <div class="detail-row"><span class="k">שעות</span><span class="v">18:30 עד 20:30</span></div>
+    <div class="detail-row"><span class="k">מפגשים</span><span class="v">עשרה מפגשים שבועיים</span></div>
     <div class="detail-row"><span class="k">מקום</span><span class="v">הוד השרון. הכתובת המדויקת נשלחת עם אישור ההרשמה</span></div>
     <div class="detail-row"><span class="k">פורמט</span><span class="v">מפגשים פרונטליים בקבוצת בוטיק קטנה, באווירה ביתית נעימה</span></div>
     <div class="detail-row"><span class="k">מקומות</span><span class="v">מספר המקומות מוגבל</span></div>
@@ -498,42 +557,31 @@ body{
 
   <div class="unit-card reveal">
     <h3 class="unit-title">יחידה ראשונה · הקרנת הבכורה, חשיפת התסריט הקיים</h3>
-    <div class="lesson"><span class="n">1</span><span class="d">שני, 17.8</span><span class="t">הקרנת הבכורה, לחשוף את תסריט החיים</span></div>
-    <div class="lesson"><span class="n">2</span><span class="d">שני, 24.8</span><span class="t">מי מנהל את הסרט שלי</span></div>
+    <div class="lesson"><span class="n">1</span><span class="t">הקרנת הבכורה: לחשוף את "תסריט החיים"</span></div>
+    <div class="lesson"><span class="n">2</span><span class="t">מי מנהל את הסרט שלי?</span></div>
+    <div class="lesson"><span class="n">3</span><span class="t">מה הסרט החיצוני מגלה לי?</span></div>
   </div>
 
   <div class="unit-card reveal">
     <h3 class="unit-title">יחידה שנייה · חדר העריכה, כותבים את התסריט מחדש</h3>
-    <div class="lesson"><span class="n">3</span><span class="d">שני, 31.8</span><span class="t">מקודדים מחדש, שיטת העבודה של ביירון קייטי</span></div>
-    <div class="lesson"><span class="n">4</span><span class="d">שני, 7.9</span><span class="t">הדיאלוג החדש, תקשורת מקרבת</span></div>
-    <div class="lesson"><span class="n">5</span><span class="d">רביעי, 16.9</span><span class="t">מפת הבמאי, מודל ה-ACT Matrix</span></div>
-    <div class="lesson"><span class="n">6</span><span class="d">רביעי, 23.9</span><span class="t">חוזרים ומקודדים, שיטת העבודה חלק שני</span></div>
-    <div class="lesson"><span class="n">7</span><span class="d">רביעי, 7.10</span><span class="t">עוגנים יומיומיים והרחבת התודעה</span></div>
+    <div class="lesson"><span class="n">4</span><span class="t">מקודדים מחדש, שיטת העבודה של ביירון קייטי</span></div>
+    <div class="lesson"><span class="n">5</span><span class="t">מפת הבמאי: לצאת מהמטריקס</span></div>
+    <div class="lesson"><span class="n">6</span><span class="t">הדיאלוג החדש: להשמיע את קול הבמאי</span></div>
+    <div class="lesson"><span class="n">7</span><span class="t">חדר העריכה: עוגנים יומיומיים והרחבת התודעה</span></div>
   </div>
 
   <div class="unit-card reveal">
     <h3 class="unit-title">יחידה שלישית · ההפקה, הופכים חזון למציאות</h3>
-    <div class="lesson"><span class="n">8</span><span class="d">רביעי, 28.10</span><span class="t">הפקת הטריילר של חיינו</span></div>
-    <div class="lesson"><span class="n">9</span><span class="d">רביעי, 4.11</span><span class="t">יצירת עוזר במאי אישי, בניית אפליקציה</span></div>
-    <div class="lesson"><span class="n">10</span><span class="d">רביעי, 11.11</span><span class="t">מחזון למציאות, הצגת התוצרים וסיום</span></div>
+    <div class="lesson"><span class="n">8</span><span class="t">הפקת הטריילר של חיינו</span></div>
+    <div class="lesson"><span class="n">9</span><span class="t">יצירת "עוזר במאי" אישי מבוסס AI</span></div>
+    <div class="lesson"><span class="n">10</span><span class="t">מחזון למציאות</span></div>
   </div>
 
-  <!-- ===== PRICE ===== -->
+  <!-- ===== שיחת התאמה ===== -->
   <div class="price reveal">
-    <h2>הרשמה</h2>
-    <div class="price-grid">
-      <div class="price-box">
-        <div class="amount">2,100 ₪</div>
-        <div class="label">עשרה מפגשים, כולל הכלים, התרגולים והליווי לאורך הדרך</div>
-      </div>
-      <div class="price-box featured">
-        <div class="amount">1,900 ₪</div>
-        <div class="label">בהרשמה מוקדמת, עד 31 ביולי 2026</div>
-      </div>
-    </div>
-    <p class="terms">ההרשמה מותנית בתשלום דמי רישום בסך 300 ₪, המהווים מקדמה על חשבון מחיר הקורס ושומרים את המקום בקבוצה.</p>
-    <a class="whatsapp" href="https://chat.whatsapp.com/Io5hjDnIb3D7W4uUPm78FK?s=cl&amp;p=a&amp;ilr=4" target="_blank" rel="noopener">להצטרפות לקבוצת הוואטסאפ</a>
-    <p class="whatsapp-note">בקבוצה מתעדכנים בפרטי הקורס, בתאריכים ובפתיחת ההרשמה.</p>
+    <h2>מתלבטים אם הקורס מתאים לכם?</h2>
+    <p class="terms">אשמח לשיחת התאמה אישית, להכיר ולראות יחד אם זה המקום הנכון עבורכם. השאירו פרטים ואחזור אליכם.</p>
+    <a class="whatsapp" href="#contact" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">להשארת פרטים לשיחת התאמה</a>
   </div>
 
   <!-- ===== ABOUT ===== -->
@@ -560,7 +608,6 @@ body{
     <!-- TODO: החליפו את YOUR_FORM_ID במזהה Formspree של ynezer@gmail.com. הוא משמש להתראת מייל בלבד. הנתונים נשמרים במקביל בטבלת leads ב-Supabase. -->
     <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="text" name="organization" placeholder="שם הארגון / המוסד (אם רלוונטי)">
       <input type="email" name="email" placeholder="דוא״ל" required>
       <input type="tel" name="phone" placeholder="טלפון">
       <textarea name="message" placeholder="מה תרצו לדעת? (לא חובה)"></textarea>
@@ -575,7 +622,7 @@ body{
 
 </div>
 
-<footer class="footer"><p>© יעל נזר 2026 · בינת הלב Life Coding</p></footer>
+<footer class="footer"><p>© כל הזכויות שמורות ליעל נזר 2026 · בינת הלב - Life Coding</p></footer>
 
 <script>
   const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12});
