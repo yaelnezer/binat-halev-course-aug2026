@@ -42,7 +42,7 @@ html{overflow-x:clip;}
 body{overflow-x:clip;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Assistant',sans-serif;
+  font-family:'Varela Round',sans-serif;
   background-color:var(--cream);
   color:var(--text-dark);
   line-height:1.8;
@@ -79,7 +79,7 @@ body{
 .faq summary .pm{flex:none;width:30px;height:30px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Heebo',sans-serif;font-weight:700;font-size:1.1rem;line-height:1;margin-top:.15rem;transition:transform .25s ease,background .2s;}
 .faq[open] summary .pm{transform:rotate(45deg);background:var(--gold-deep);}
 .faq .ans{padding:0 1.6rem 1.4rem;}
-.faq .ans p{font-family:'Varela Round',sans-serif;font-size:1.25rem;line-height:1.8;color:#2d2d2d;}
+.faq .ans p{font-family:'Varela Round',sans-serif;font-size:1.35rem;line-height:1.8;color:#2d2d2d;}
 
 /* ===== חזרה לתפריט ===== */
 .totop{position:fixed;bottom:1.4rem;left:1.4rem;z-index:60;font-family:'Heebo',sans-serif;font-weight:700;font-size:1.1rem;line-height:1;border:none;background:var(--primary);color:var(--cream-light);padding:.75rem 1.2rem;border-radius:999px;cursor:pointer;box-shadow:0 12px 26px -10px rgba(31,95,85,.7);display:none;align-items:center;gap:.4rem;transition:all .2s;}
@@ -94,18 +94,18 @@ body{
 .top-banner span{font-family:'Suez One',serif;color:#fff;font-size:clamp(1.7rem,4vw,2.1rem);letter-spacing:.02em;}
 
 /* ===== HERO ===== */
-.hero{background:linear-gradient(180deg,var(--cream-light),var(--cream));padding:2.5rem 1.5rem 1.5rem;}
-.hero-frame{
-  max-width:860px;margin:0 auto;
-  border:1px solid var(--gold);border-radius:4px;
-  padding:3rem 2rem 2.6rem;position:relative;
-}
-.hero-frame::before{
-  content:"✦";position:absolute;top:-.7rem;right:50%;transform:translateX(50%);
-  background:var(--cream-light);padding:0 1rem;color:var(--gold);font-size:1rem;
-}
+.hero{position:relative;background:radial-gradient(120% 90% at 50% 0%,var(--cream-light) 0%,var(--cream) 55%,var(--cream-deep) 100%);padding:3.5rem 1.5rem 3rem;overflow:hidden;}
+.hero-frame{max-width:860px;margin:0 auto;position:relative;}
+.deco{position:absolute;opacity:.5;pointer-events:none;}
 .hero-text{text-align:center;}
 .hero-author{font-family:'Heebo',sans-serif;font-size:1.5rem;font-weight:600;color:var(--primary);letter-spacing:.02em;margin-bottom:1.5rem;}
+.hero-q{font-family:'Suez One',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.3;color:var(--primary-dark);margin-bottom:1.1rem;text-wrap:balance;}
+.hero-promise{font-family:'Suez One',serif;font-weight:400;font-size:clamp(1.3rem,2.6vw,1.6rem);color:var(--primary-dark);line-height:1.6;max-width:660px;margin:0 auto 2.2rem;text-wrap:balance;}
+.hero-intro{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--primary-dark),var(--primary));border-radius:1.25rem;box-shadow:0 18px 40px -22px rgba(31,95,85,.7);max-width:62ch;margin:2.2rem auto 0;padding:clamp(1.4rem,4.5vw,2.25rem) clamp(1.1rem,4.5vw,2.25rem);text-align:right;}
+.hero-intro::before{content:"";position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.hero-intro p{font-family:'Varela Round',sans-serif;font-size:clamp(.99rem,.88rem + .62vw,1.25rem);line-height:1.75;color:var(--cream-light);margin-bottom:1rem;}
+.hero-intro p:last-child{margin-bottom:0;}
+.hero-intro b{font-family:'Heebo',sans-serif;font-weight:700;color:var(--gold-light);}
 .hero-author-box{font-family:'Heebo',sans-serif;font-weight:700;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--primary-dark);line-height:1.7;max-width:720px;margin:0 auto 1.5rem;text-align:center;background:rgba(196,165,115,.16);border:1px solid var(--gold-light);border-radius:1.1rem;padding:1rem 1.4rem;}
 .hero-logo{
   position:relative;max-width:230px;margin:0 auto 1.8rem;aspect-ratio:1/1;
@@ -159,9 +159,9 @@ body{
 @media (max-width:980px){.gain-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:560px){.gain-grid{grid-template-columns:1fr;}}
 .gain{background:var(--cream-light);border:1px solid var(--gold-light);border-radius:1.1rem;padding:1.8rem 1.5rem;box-shadow:0 8px 24px -16px rgba(58,40,26,.3);}
-.gain .ico{font-family:'Suez One',serif;color:var(--gold);font-size:1.6rem;line-height:1;margin-bottom:.5rem;display:block;}
+.gain .ico{font-family:'Suez One',serif;color:var(--primary);font-size:1.6rem;line-height:1;margin-bottom:.5rem;display:block;}
 .gain .gt{font-family:'Heebo',sans-serif;font-weight:700;font-size:1.25rem;color:var(--primary-dark);margin-bottom:.35rem;}
-.gain .gd{font-family:'Assistant',sans-serif;font-size:1.2rem;line-height:1.7;color:var(--text-mid);}
+.gain .gd{font-family:'Varela Round',sans-serif;font-size:1.3rem;line-height:1.8;color:#2d2d2d;}
 .trailer{margin:0 auto;text-align:center;}
 .trailer-vid{width:min(300px,72vw);margin:0 auto;aspect-ratio:9/16;background:#111;border-radius:1.25rem;overflow:hidden;box-shadow:0 16px 40px -18px rgba(45,122,110,.45);border:1px solid var(--gold-light);}
 .trailer-vid iframe{width:100%;height:100%;border:0;display:block;}
@@ -171,7 +171,7 @@ body{
 .feature-vid iframe{width:100%;height:100%;border:0;display:block;}
 .feature .who{font-family:'Heebo',sans-serif;font-weight:700;color:var(--primary);font-size:1.15rem;}
 .section-hook{font-family:'Suez One',serif;font-size:clamp(1.4rem,3vw,1.75rem);color:var(--primary-dark);text-align:center;line-height:1.5;max-width:620px;margin:0 auto 1.4rem;}
-.section-sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.2rem;margin-bottom:1.6rem;}
+.section-sub{font-family:'Varela Round',sans-serif;text-align:center;color:#2d2d2d;font-size:1.25rem;margin-bottom:1.6rem;}
 .section-divider{height:1px;background:linear-gradient(90deg,var(--gold-light),transparent);opacity:.5;margin:0 0 2rem;}
 
 /* ===== TOOLS (INNOV) ===== */
@@ -217,20 +217,20 @@ body{
 .unit-card{background:var(--cream-light);border-radius:1.25rem;padding:2rem 1.8rem;margin-bottom:1.2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
 .lesson{display:grid;grid-template-columns:2.2rem 1fr;align-items:center;gap:.9rem;padding:.7rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
 .lesson:last-child{border-bottom:none;}
-.lesson .n{font-family:'Suez One',serif;color:var(--gold-deep);font-size:1.3rem;text-align:center;}
+.lesson .n{font-family:'Suez One',serif;color:var(--primary);font-size:1.3rem;text-align:center;}
 .lesson .d{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--text-light);font-weight:600;}
-.lesson .t{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.5;}
+.lesson .t{font-family:'Varela Round',sans-serif;font-size:1.35rem;color:#2d2d2d;line-height:1.6;}
 .lesson .tg{font-family:'Heebo',sans-serif;font-size:.95rem;background:rgba(45,122,110,.10);color:var(--primary-dark);padding:.2rem .8rem;border-radius:999px;white-space:nowrap;}
 @media(max-width:640px){.lesson{grid-template-columns:2rem 1fr;row-gap:.2rem;}.lesson .t{grid-column:2;}}
 .unit-title{font-family:'Suez One',serif;font-size:1.45rem;color:var(--primary-dark);font-weight:normal;margin-bottom:.9rem;line-height:1.4;}
 .step-card{background:#fff;border-radius:1rem;padding:1.3rem 1.5rem;border-right:5px solid var(--gold);box-shadow:0 4px 12px rgba(45,122,110,.06);margin-bottom:.9rem;}
 .step-card-inner{display:flex;align-items:flex-start;gap:1rem;}
-.step-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;width:2.6rem;height:2.6rem;border-radius:50%;font-family:'Suez One',serif;font-size:1.3rem;flex-shrink:0;margin-top:.15rem;}
+.step-number{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--primary-light),var(--primary-dark));color:#fff;width:2.6rem;height:2.6rem;border-radius:50%;font-family:'Suez One',serif;font-size:1.3rem;flex-shrink:0;margin-top:.15rem;}
 .step-content h3{font-family:'Suez One',serif;font-size:1.4rem;color:var(--primary);font-weight:normal;margin-bottom:.3rem;line-height:1.4;}
 .step-content .date{font-family:'Heebo',sans-serif;font-size:1.05rem;color:var(--text-light);font-weight:600;}
 .step-content .tools{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem;}
 .step-content .tools span{font-family:'Heebo',sans-serif;font-size:.95rem;background:rgba(45,122,110,.10);color:var(--primary-dark);padding:.2rem .8rem;border-radius:999px;}
-.break-note{font-family:'Varela Round',sans-serif;text-align:center;color:var(--text-mid);font-size:1.15rem;background:rgba(196,165,115,.12);border-radius:.8rem;padding:.8rem 1rem;margin-bottom:2rem;}
+.break-note{font-family:'Varela Round',sans-serif;text-align:center;color:#2d2d2d;font-size:1.25rem;background:rgba(196,165,115,.12);border-radius:.8rem;padding:.8rem 1rem;margin-bottom:2rem;}
 
 /* ===== DETAILS ===== */
 .details{background:linear-gradient(135deg,var(--cream-light),var(--cream));border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--gold);}
@@ -238,7 +238,7 @@ body{
 .detail-row{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid rgba(196,165,115,.3);}
 .detail-row:last-child{border-bottom:none;}
 .detail-row .k{font-family:'Heebo',sans-serif;font-weight:700;color:var(--primary);font-size:1.25rem;min-width:110px;flex-shrink:0;}
-.detail-row .v{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.6;}
+.detail-row .v{font-family:'Varela Round',sans-serif;font-size:1.35rem;color:#2d2d2d;line-height:1.7;}
 
 /* ===== PRICE ===== */
 .price{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:2rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);text-align:center;}
@@ -248,13 +248,13 @@ body{
 .price-box{border:1.5px solid var(--gold-light);border-radius:1rem;padding:1.5rem 1.2rem;background:#fff;}
 .price-box.featured{border:2px solid var(--primary);background:rgba(45,122,110,.05);}
 .price-box .amount{font-family:'Suez One',serif;font-size:2.2rem;color:var(--primary-dark);line-height:1.2;}
-.price-box .label{font-family:'Varela Round',sans-serif;font-size:1.15rem;color:var(--text-mid);line-height:1.6;margin-top:.4rem;}
+.price-box .label{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;line-height:1.6;margin-top:.4rem;}
 .price .link-btn{margin-inline:auto;}
 .price .whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;margin-top:1.4rem;background:#25D366;color:#fff;font-family:'Varela Round',sans-serif;font-weight:700;font-size:1.2rem;text-decoration:none;padding:.85rem 2.1rem;border-radius:999px;min-height:52px;transition:all .2s;}
 .price .whatsapp::before{content:"✆";font-size:1.3rem;}
 .price .whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.35);}
-.price .whatsapp-note{font-family:'Varela Round',sans-serif;font-size:1.15rem;color:var(--text-mid);margin-top:1.6rem;}
-.price .terms{font-family:'Varela Round',sans-serif;font-size:1.2rem;color:#2d2d2d;background:rgba(196,165,115,.12);border-right:4px solid var(--gold);border-radius:0 .8rem .8rem 0;padding:1.1rem 1.3rem;text-align:right;line-height:1.8;}
+.price .whatsapp-note{font-family:'Varela Round',sans-serif;font-size:1.25rem;color:#2d2d2d;margin-top:1.6rem;}
+.price .terms{font-family:'Varela Round',sans-serif;font-size:1.3rem;color:#2d2d2d;background:rgba(196,165,115,.12);border-right:4px solid var(--gold);border-radius:0 .8rem .8rem 0;padding:1.1rem 1.3rem;text-align:right;line-height:1.8;}
 
 /* ===== ABOUT ===== */
 .rule{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:0 auto 1rem;}
@@ -273,21 +273,22 @@ body{
 .about p:last-child{margin-bottom:0;}
 
 /* ===== CONTACT ===== */
-.contact{background:var(--cream-light);border-radius:1.25rem;padding:2.5rem;margin-bottom:1.5rem;box-shadow:0 6px 28px rgba(100,65,30,.10);border-top:3px solid var(--primary);}
-.contact h2{font-family:'Suez One',serif;font-size:2rem;color:var(--primary);font-weight:normal;text-align:center;margin-bottom:.3rem;}
-.contact .sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--primary);margin-bottom:1.5rem;font-size:1.25rem;}
+.contact{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--primary-dark),var(--primary));border-radius:1.25rem;padding:2.5rem;margin-bottom:1.5rem;box-shadow:0 18px 40px -22px rgba(31,95,85,.7);}
+.contact::before{content:"";position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));}
+.contact h2{font-family:'Suez One',serif;font-size:2rem;color:var(--cream-light);font-weight:normal;text-align:center;margin-bottom:.3rem;}
+.contact .sub{font-family:'Varela Round',sans-serif;text-align:center;color:var(--gold-light);margin-bottom:1.5rem;font-size:1.25rem;}
 .contact form{display:flex;flex-direction:column;gap:.85rem;max-width:480px;margin:0 auto;}
-.contact input,.contact textarea{font-family:'Assistant',sans-serif;font-size:1.15rem;border:1.5px solid rgba(45,122,110,.3);border-radius:.8rem;padding:.8rem 1.1rem;background:#fff;color:var(--text-dark);transition:border-color .2s,box-shadow .2s;width:100%;}
-.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(45,122,110,.12);}
+.contact input,.contact textarea{font-family:'Assistant',sans-serif;font-size:1.15rem;border:1.5px solid var(--gold-light);border-radius:.8rem;padding:.8rem 1.1rem;background:var(--cream-light);color:var(--text-dark);transition:border-color .2s,box-shadow .2s;width:100%;}
+.contact input:focus,.contact textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(196,165,115,.3);}
 .contact textarea{resize:vertical;min-height:96px;}
-.submit{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border:none;height:54px;border-radius:999px;font-family:'Varela Round',sans-serif;font-weight:700;font-size:1.25rem;cursor:pointer;transition:all .2s;margin-top:.4rem;}
+.submit{background:linear-gradient(135deg,var(--primary-light),var(--primary));color:#fff;border:none;height:54px;border-radius:999px;font-family:'Varela Round',sans-serif;font-weight:700;font-size:1.25rem;cursor:pointer;transition:all .2s;margin-top:.4rem;}
 .submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,122,110,.35);}
 .submit:disabled{opacity:.6;cursor:wait;transform:none;box-shadow:none;}
-.contact-error{font-family:'Varela Round',sans-serif;text-align:center;color:#b00020;font-size:1.1rem;margin-top:.7rem;}
+.contact-error{font-family:'Varela Round',sans-serif;text-align:center;color:#ffd7d7;font-size:1.1rem;margin-top:.7rem;}
 .contact-success{text-align:center;padding:1.5rem 1rem;}
-.contact-success p{font-family:'Suez One',serif;font-size:1.5rem;color:var(--primary-dark);max-width:480px;margin:0 auto;line-height:1.5;}
-.contact .direct{font-family:'Varela Round',sans-serif;text-align:center;margin-top:1.2rem;color:var(--primary);font-size:1.1rem;}
-.contact .direct a{color:var(--primary);text-decoration:none;font-weight:700;}
+.contact-success p{font-family:'Suez One',serif;font-size:1.5rem;color:var(--cream-light);max-width:480px;margin:0 auto;line-height:1.5;}
+.contact .direct{font-family:'Varela Round',sans-serif;text-align:center;margin-top:1.2rem;color:var(--gold-light);font-size:1.1rem;}
+.contact .direct a{color:var(--cream-light);text-decoration:none;font-weight:700;border-bottom:1px solid var(--gold-light);}
 
 .closing{text-align:center;margin:2.5rem auto 2rem;max-width:560px;}
 .closing p{font-family:'Suez One',serif;font-size:clamp(1.4rem,3vw,1.7rem);color:var(--primary-dark);line-height:1.6;}
@@ -336,21 +337,23 @@ body{
 
 <!-- ===== HERO ===== -->
 <header class="hero">
+  <svg viewBox="0 0 60 90" width="72" height="108" class="deco" style="top:180px;right:6%;transform:rotate(18deg);" aria-hidden="true"><path d="M30 2C10 20 4 46 30 88 56 46 50 20 30 2Z" fill="none" stroke="var(--gold)" stroke-width="1.4"></path><path d="M30 10V80" stroke="var(--gold)" stroke-width="1.2"></path><path d="M30 30 44 22M30 44 48 38M30 30 16 22M30 44 12 38M30 58 44 52M30 58 16 52" stroke="var(--gold)" stroke-width="1"></path></svg>
+
   <div class="hero-frame">
     <div class="hero-text">
-      <p class="hero-sub">המקום שבו תודעה פוגשת בינה מלאכותית</p>
-      <div class="hero-subline"></div>
-      <div class="hero-author-box">יעל נזר, MEd <span style="color:var(--gold);">✦</span> מפתחת שיטת <span style="white-space:nowrap;">בינת הלב - Life Coding</span></div>
-
-      <div class="hero-divider"><span>✦ ✦ ✦</span></div>
-      <p class="hero-lead">הבינה המלאכותית משנה את העולם. השאלה היא איך אנחנו בוחרים לפגוש את השינוי הזה, מתוך סקרנות או מתוך חשש?</p>
-      <p class="hero-hook">קורס בוטיק חדשני יוצא לדרך</p>
-      <p class="hero-note">נזהה את הדפוסים שמנהלים את חיינו, נכתוב מחדש את תסריט החיים, ונרכוש שליטה בכלי הבינה המלאכותית המתקדמים ביותר.</p>
+      <h1 class="hero-q">מרגישים תקועים באותו מקום בזוגיות, כסף ובריאות?</h1>
+      <p class="hero-promise">בשיטת בינת הלב - Life Coding מתחברים אל החכם הפנימי שבתוכנו, ויוצרים את מציאות חיינו מתוך בחירה והגשמה, בעזרת כלי הבינה המלאכותית המתקדמים ביותר.</p>
+      <div class="hero-author-box">יעל נזר, MEd <span style="color:var(--gold);">✦</span> מפתחת שיטת <span style="white-space:nowrap;">בינת הלב - Life Coding</span><br>המקום שבו תודעה פוגשת בינה מלאכותית.</div>
       <span class="hero-badge">קבוצת בוטיק קטנה · מספר המקומות מוגבל</span>
 
       <!-- סרטון פותח: כל מציאות מתחילה מפריים אחד -->
       <div class="video-frame vertical framed">
         <video src="opening.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+      </div>
+
+      <div class="hero-intro">
+        <p><b>בינת הלב - Life Coding</b> הוא קורס בוטיק שמשלב שליטה בכלי הבינה המלאכותית עם עבודה תודעתית עמוקה. המפגשים מתקיימים באווירה ביתית ומכילה, בקצב אישי, ומתוך כוחה של קבוצה קטנה שמתקדמת יחד.</p>
+        <p>בסיום הקורס תכירו את מה שמעכב אתכם מלהיות הגרסה הטובה ביותר של עצמכם, ותצאו עם <b>כלים אישיים שימשיכו ללוות אתכם</b> ומאפשרים לעצור, להתבונן וליצור שינוי אמיתי.</p>
       </div>
 
       <nav class="links" style="margin-top:2rem;margin-bottom:0;">
@@ -496,6 +499,27 @@ body{
         <p class="who">חגית נחום</p>
       </div>
 
+      <!-- המלצות כתובות חזקות -->
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>הקורס היה עבורי מתנה גדולה. בעקבות הקורס למדתי רבות על דפוסי החשיבה שלי ולמדתי איך לחקור אותם. הקורס זימן לי הכרות והרחבה של ארגז כלים עשיר לחקירת התודעה שלי ולמודעות עצמית.</p>
+          <p>הבוטים שיעל בנתה מזמנים חווית השתלמות שלא דומה לשום השתלמות, והלמידה על עצמי באמצעותם הייתה חווייתית ומשמעותית מאוד.</p>
+          <p>כדאי לכם להירשם לקורס כי באמצעותו תכירו את תסריט חייכם, תלמדו מי מנהל את הסרט שלכם, ואיך לבנות את מפת הבמאי של חיינו לפי הערכים, האנשים והתפיסה שנרצה לבחור.</p>
+          <p class="who">מירב שראבי</p>
+        </div>
+      </div>
+
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>במהלך הקורס זיהיתי בתוכי את התסריטים האוטומטיים. תהליך הלמידה הציב בפניי מראה, ואפשר לי לעצור ולבחון מחדש את השיח הפנימי והחיצוני שלי.</p>
+          <p>כמי שעוסקת בטכנולוגיה ביומיום, הנטייה הטבעית שלי היא לראות בכלים האלה אמצעים להגברת פרודוקטיביות. הקורס הציע זווית ראייה חדשה לחלוטין: שימוש בבינה מלאכותית כראי לנפש וככלי לרפלקציה עמוקה.</p>
+          <p>לו הייתי ממליצה לחברה על הקורס הייתי אומרת: זה לא עוד קורס תיאורטי על חוסן, זהו מסע מעשי, חווייתי ומשנה תפיסה. הקורס מעניק כפתור עצירה במרוץ החיים.</p>
+          <p class="who">דורית</p>
+        </div>
+      </div>
+
       <!-- ציטוטים -->
       <div class="slide wide">
         <div class="quote-card">
@@ -524,6 +548,16 @@ body{
           <p class="who">פנינה</p>
         </div>
       </div>
+
+      <div class="slide wide">
+        <div class="quote-card">
+          <div class="mark">״</div>
+          <p>לאורך השנים אני עוברת תהליכי התפתחות משמעותיים, והרבה מהכלים אני מכירה. אבל השילוב שאת עשית כאן, החיבור בין כל הכלים שהכרתי לבין הבינה המלאכותית, והרצף, השימוש בכלים שלב אחרי שלב, גרם לי פתאום להבין אחרת גם את הכלים וגם את עצמי.</p>
+          <p>יצרת שזירה שמאפשרת תהליך התפתחות, מהרגע הראשון של להבין את תבניות החשיבה, ועד לשלב של ליצור עתיד, ואפילו סרטון שישקף את העתיד שלי. זו זכות גדולה לעבור את התהליך הזה איתך, ואני מרגישה שזה משנה חיים.</p>
+          <p class="who">עדי זקר</p>
+        </div>
+      </div>
+
       <div class="slide">
         <div class="quote-card">
           <div class="mark">״</div>
@@ -711,7 +745,6 @@ body{
 
 <footer class="footer">
   <p>© כל הזכויות שמורות ליעל נזר 2026 · בינת הלב - Life Coding</p>
-  <a class="backlink" href="https://yaelnezer.github.io/binat-halev-landing/" target="_blank" rel="noopener">לדף הראשי של בינת הלב - Life Coding</a>
 </footer>
 
 <script>
