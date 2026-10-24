@@ -514,6 +514,21 @@ body{
   .try-btns{flex-wrap:nowrap;gap:.6rem;}
   .try-btns .link-btn{width:auto;flex:1 1 0;justify-content:center;text-align:center;padding:.85rem .7rem;font-size:1.15rem;line-height:1.35;}
 }
+/* ===== עדכון 24 באוקטובר 2026, כמו בדף הנחיתה ===== */
+@media (max-width:600px){
+  .nv-links [href="#method"]{order:1;}
+  .nv-links [href="#about"]{order:2;}
+  .nv-links [href="#testimonials"]{order:3;}
+  .nv-links [href="#schedule"]{order:4;}
+  .nv-try{order:5;}
+}
+.nv-try{background:rgba(255,253,249,.7);color:var(--primary-dark);}
+.nv-try:hover,.nv-try[aria-expanded="true"]{background:rgba(45,122,110,.1);color:var(--primary-dark);}
+@media (min-width:821px){.hero{padding-top:1.6rem;}}
+@media (max-width:600px){
+  .totop{font-size:1rem;width:auto;height:44px;padding:0 1rem;gap:.35rem;border-radius:999px;}
+  .totop span{font-size:1.15rem;}
+}
 </style>
 </head>
 <body>
@@ -532,13 +547,13 @@ body{
   <div class="nv-in">
     <div class="nv-links" id="navLinks">
       <a href="#top" class="nv-desk">בית</a>
-      <a href="#why" class="nv-desk">מה תרוויחו</a>
       <a href="#method">השיטה</a>
-      <button type="button" class="nv-try" id="nvTry" aria-expanded="false" aria-controls="nvTryPanel">להתנסות <span class="car" aria-hidden="true">▾</span></button>
-      <a href="#schedule">המפגשים</a>
-      <a href="#testimonials">המלצות</a>
-      <a href="#faq" class="nv-desk">שאלות</a>
       <a href="#about">מי אני</a>
+      <a href="#testimonials">המלצות</a>
+      <a href="#schedule">המפגשים</a>
+      <button type="button" class="nv-try" id="nvTry" aria-expanded="false" aria-controls="nvTryPanel">להתנסות <span class="car" aria-hidden="true">▾</span></button>
+      <a href="#why" class="nv-desk">מה תרוויחו</a>
+      <a href="#faq" class="nv-desk">שאלות</a>
       <a href="#contact" class="nv-desk">צרו קשר</a>
     </div>
     <div class="nv-panel" id="nvTryPanel" hidden>
@@ -560,9 +575,8 @@ body{
            <h1 class="hero-q hook">אותו ריב, אותה תחושה בעבודה, <span class="hook-key">אותה סצנה חוזרת שוב ושוב?</span></h1>
            <p class="hero-promise">בשיטת בינת הלב - Life Coding מתחברים אל החכם הפנימי שבתוכנו, ויוצרים את מציאות חיינו מתוך בחירה והגשמה, בעזרת כלי הבינה המלאכותית המתקדמים ביותר.</p>
            פסקה שנייה בכרטיס הירוק: בסיום הקורס תכירו את מה שמעכב אתכם מלהיות הגרסה הטובה ביותר של עצמכם, ותצאו עם <b>כלים אישיים שימשיכו ללוות אתכם</b> ומאפשרים לעצור, להתבונן וליצור שינוי אמיתי. -->
+      <h1 class="hero-q hook">חיים בסרט שלא אתם בחרתם?<br>הגיע הזמן לשבת בכיסא הבמאי ולכתוב את התסריט מחדש.</h1>
       <div class="hero-author-box hero-author-top">יעל נזר, MEd <span style="color:var(--gold);">✦</span> מפתחת שיטת <span style="white-space:nowrap;">בינת הלב - Life Coding</span></div>
-      <h1 class="hero-q hook">מי מנהל את החיים שלנו?<br><span class="hook-key">אנחנו, או הקוד שפועל בתוכנו?</span></h1>
-      <p class="hook-q">ומה אם דווקא ברגע האמת היו לכם כלים אישיים, זמינים ומדויקים?</p>
 
       <!-- סרטון פותח: כל מציאות מתחילה מפריים אחד -->
       <div class="hero-video">
@@ -574,7 +588,7 @@ body{
 
       <div class="hero-intro">
         <p><b>בינת הלב - Life Coding</b> הוא קורס בוטיק שמשלב שליטה בכלי הבינה המלאכותית עם עבודה תודעתית עמוקה. המפגשים מתקיימים באווירה ביתית ומכילה, בקצב אישי, ומתוך כוחה של קבוצה קטנה שמתקדמת יחד.</p>
-        <p>הבינה המלאכותית משמשת <b>כמראה לתודעה</b>, מרחב חקירה זמין ושותף ליצירה. בתהליך כל אחד בונה לעצמו <b>אפליקציה אישית</b>, לשמירת המטרות ולמעקב אחר ההתקדמות. כלי הבינה המלאכותית שבשיטה מלווים אותו בחיי היומיום, ועוזרים לו <b>לעצור, לווסת את הרגש ולבחור תגובות חדשות</b>.</p>
+        <p>בתהליך הלמידה תזהו את הדפוסים שמנהלים אתכם ותכתבו את התסריט שלכם מחדש. כלי הבינה המלאכותית ישמשו אתכם <b>כמראה לתודעה</b>, ויישארו איתכם ביומיום, זמינים בכל רגע, כדי <b>לעצור, לווסת את הרגש ולבחור תגובות חדשות</b>.</p>
       </div>
 
       <span class="hero-badge">קבוצת בוטיק קטנה · מספר המקומות מוגבל</span>
@@ -1037,8 +1051,8 @@ body{
     var links=Array.prototype.slice.call(document.querySelectorAll('.nv-links a'));
     var secs=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));});
     var upd=function(){
-      var y=window.scrollY+100, best=0;
-      secs.forEach(function(s,i){ if(s && s.getBoundingClientRect().top+window.scrollY<=y) best=i; });
+      var y=window.scrollY+Math.max(100,document.querySelector('.nv').offsetHeight+40), best=0, bestTop=-1;
+      secs.forEach(function(s,i){ var t=s?s.getBoundingClientRect().top+window.scrollY:0; if(s && t<=y && t>bestTop){ best=i; bestTop=t; } });
       links.forEach(function(a,i){ a.classList.toggle('active', i===best); });
     };
     window.addEventListener('scroll',upd,{passive:true}); upd();
